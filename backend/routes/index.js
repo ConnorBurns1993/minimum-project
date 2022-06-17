@@ -1,4 +1,6 @@
 const express = require("express");
+const csrf = require("csurf");
+// const csrfProtection = csrf({ cookie: true });
 const router = express.Router();
 const apiRouter = require("./api");
 
@@ -9,7 +11,7 @@ if (process.env.NODE_ENV === "production") {
 
   router.get("/", (req, res) => {
     res.cookie("XSRF-TOKEN", req.csrfToken());
-    res.sendFile(
+    return res.sendFile(
       path.resolve(__dirname, "../../frontend", "build", "index.html")
     );
   });
@@ -18,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 
   router.get(/^(?!\/?api).*/, (req, res) => {
     res.cookie("XSRF-TOKEN", req.csrfToken());
-    res.sendFile(
+    return res.sendFile(
       path.resolve(__dirname, "../../frontend", "build", "index.html")
     );
   });

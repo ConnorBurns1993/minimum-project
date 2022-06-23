@@ -6,10 +6,13 @@ const { requireAuth } = require("../../utils/auth.js");
 const router = require("express").Router();
 const sessionRouter = require("./session.js");
 const usersRouter = require("./users.js");
+const articlesRouter = require("./articles.js");
 
 router.use("/session", sessionRouter);
 
 router.use("/users", usersRouter);
+
+router.use("/articles", articlesRouter);
 
 router.get(
   "/set-token-cookie",

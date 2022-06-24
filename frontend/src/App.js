@@ -5,6 +5,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import ArticleList from "./components/ArticlesList";
 import Home from "./components/Home";
+import SingleArticle from "./components/SingleArticle";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/articles" exact>
             <ArticleList />
+          </Route>
+          <Route path="/articles/:articleId" exact>
+            <SingleArticle />
           </Route>
         </Switch>
       )}

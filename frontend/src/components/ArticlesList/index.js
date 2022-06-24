@@ -9,8 +9,6 @@ const ArticleList = () => {
     return Object.values(state.articles);
   });
 
-  console.log(articles);
-
   useEffect(() => {
     dispatch(loadArticles());
   }, [dispatch]);
@@ -18,14 +16,19 @@ const ArticleList = () => {
   return (
     <>
       <ul className="">
-        {articles.map((article) => {
-          return (
-            <li key={article.id}>
-              <h2 className="article-list-title">{article.title}</h2>
-              <p className="article-list-body">{article.body}</p>
-            </li>
-          );
-        })}
+        {articles
+          .sort()
+          .reverse()
+          .map((article) => {
+            return (
+              <li key={article.id}>
+                <h2 className="article-list-title">{article.title}</h2>
+                <p className="article-list-body">{article.body}</p>
+                <button className="fas fa-solid fa-pen-to-square"></button>
+                <button className="fas fa-solid fa-trash"></button>
+              </li>
+            );
+          })}
       </ul>
     </>
   );

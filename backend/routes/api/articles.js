@@ -24,4 +24,12 @@ router.get(
   })
 );
 
+router.post(
+  "/new",
+  asyncHandler(async (req, res) => {
+    const newArticle = await db.Article.create(req.body);
+    res.json(newArticle);
+  })
+);
+
 module.exports = router;

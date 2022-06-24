@@ -4,12 +4,12 @@ import { ValidationError } from "../utils/validationError";
 const ADD_ARTICLE = "articles/ADD_ARTICLE";
 const LOAD_ARTICLES = "articles/LOAD_ARTICLES";
 const UPDATE_ARTICLE = "articles/UPDATE_ARTICLE";
-const DELETE_ARTICLE = "articles/LOAD_ARTICLE";
+const DELETE_ARTICLE = "articles/DELETE_ARTICLE";
 
-const add = (article) => {
+const add = (articleId) => {
   return {
     type: ADD_ARTICLE,
-    article,
+    article: articleId,
   };
 };
 
@@ -47,8 +47,8 @@ export const loadOneArticle = (articleId) => async (dispatch) => {
   const response = await csrfFetch(`/api/articles/${articleId}`);
 
   if (response.ok) {
-    const articles = await response.json();
-    dispatch(add(articles));
+    const article = await response.json();
+    dispatch(add(article));
   }
 };
 
@@ -119,12 +119,12 @@ const articleReducer = (state = initialState, action) => {
       return normalArticles;
 
     case ADD_ARTICLE:
-      if (!state[action.business.id]) {
+      if (!state[action.article.id]) {
         const normalAddArticle = {
           ...state,
           [action.article.id]: action.article,
         };
-        const articleList = normalAddArticle.list.map(
+        const articleList = Object.values(normalAddArticle).map(
           (id) => normalAddArticle[id]
         );
         articleList.push(action.article);

@@ -32,4 +32,29 @@ router.post(
   })
 );
 
+router.put(
+  "/:id/edit",
+  asyncHandler(async (req, res) => {
+    const { title, body } = req.body;
+    const article = await db.Article.findByPk(req.params.id);
+
+    await article.update({
+      title,
+      body,
+    });
+
+    return res.json(article);
+  })
+);
+
+router.delete(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    const id = req.params.id;
+    const deleteArticle = await Business.findByPk(id);
+    await deleteArticle.destroy();
+    return res.json({ id });
+  })
+);
+
 module.exports = router;

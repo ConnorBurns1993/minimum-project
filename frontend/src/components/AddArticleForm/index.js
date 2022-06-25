@@ -32,7 +32,7 @@ const AddArticleForm = () => {
 
   const handleCancelClick = (e) => {
     e.preventDefault();
-    history.push("/articles");
+    history.goBack();
   };
 
   return (

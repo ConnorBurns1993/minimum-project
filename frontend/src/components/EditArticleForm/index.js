@@ -1,15 +1,15 @@
-import { addArticle } from "../../store/article";
+import { updateArticle } from "../../store/article";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-import { useHistory, NavLink, useParams } from "react-router-dom";
-import "./AddArticleForm.css";
+import { useHistory, useParams } from "react-router-dom";
+import "./EditArticleForm.css";
 
-const AddArticleForm = () => {
+const EditArticleForm = () => {
   const sessionUser = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
   const { articleId } = useParams();
-  const article = useSelector((state) => state.article(articleId));
+  const article = useSelector((state) => state.articles[articleId]);
 
   const [title, setTitle] = useState(article.title);
   const [body, setBody] = useState(article.body);
@@ -18,16 +18,17 @@ const AddArticleForm = () => {
   const updateTitle = (e) => setTitle(e.target.value);
   const updateBody = (e) => setBody(e.target.value);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newArticle = {
+    const editArticle = {
+      ...article,
       userId: sessionUser.id,
       title,
       body,
     };
 
-    dispatch(addArticle(newArticle))
+    dispatch(updateArticle(editArticle))
       .then(() => history.push(`/articles/${articleId}`))
       .catch(async (res) => {
         const data = await res.json();
@@ -37,31 +38,22 @@ const AddArticleForm = () => {
 
   const handleCancelClick = (e) => {
     e.preventDefault();
-    history.push("/articles");
+    history.goBack();
   };
 
   return (
     <>
-      <div className="mock-header">
-        <NavLink exact to="/">
-          <img src="../../public/images/favicon.svg" alt=""></img>
-        </NavLink>
-      </div>
       <form onSubmit={(e) => handleSubmit(e)}>
         <ul>
           {errors.map((error, idx) => (
             <li key={idx}>{error}</li>
           ))}
         </ul>
-        <input
-          placeholder="Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        ></input>
+        <input placeholder="Title" value={title} onChange={updateTitle}></input>
         <input
           placeholder="Write your article here..."
           value={body}
-          onChange={(e) => setBody(e.target.value)}
+          onChange={updateBody}
         ></input>
         <button onClick={handleSubmit}>Submit</button>
         <button onClick={handleCancelClick}>Cancel</button>
@@ -70,4 +62,4 @@ const AddArticleForm = () => {
   );
 };
 
-export default AddArticleForm;
+export default EditArticleForm;

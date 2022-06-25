@@ -7,6 +7,7 @@ import ArticleList from "./components/ArticlesList";
 import Home from "./components/Home";
 import SingleArticle from "./components/SingleArticle";
 import AddArticleForm from "./components/AddArticleForm";
+import EditArticleForm from "./components/EditArticleForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/articles/:articleId" exact>
             <SingleArticle />
+          </Route>
+          <Route path="/articles/:articleId/edit" exact>
+            <EditArticleForm />
           </Route>
         </Switch>
       )}

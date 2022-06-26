@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import "./SignupForm.css";
 
 function SignupForm() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const sessionUser = useSelector((state) => state.session.user);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -23,7 +25,8 @@ function SignupForm() {
         async (res) => {
           const data = await res.json();
           if (data && data.errors) setErrors(data.errors);
-        }
+        },
+        history.push("/articles")
       );
     }
     return setErrors([

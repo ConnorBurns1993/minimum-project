@@ -6,10 +6,10 @@ const LOAD_ARTICLES = "articles/LOAD_ARTICLES";
 const UPDATE_ARTICLE = "articles/UPDATE_ARTICLE";
 const DELETE_ARTICLE = "articles/DELETE_ARTICLE";
 
-const add = (articleId) => {
+const add = (article) => {
   return {
     type: ADD_ARTICLE,
-    article: articleId,
+    article,
   };
 };
 
@@ -85,8 +85,9 @@ export const addArticle = (newArticle) => async (dispatch) => {
 };
 
 export const updateArticle = (article) => async (dispatch) => {
-  const response = await csrfFetch(`/api/articles/${article.id}`, {
+  const response = await csrfFetch(`/api/articles/${article.id}/edit`, {
     method: "PUT",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(article),
   });
 

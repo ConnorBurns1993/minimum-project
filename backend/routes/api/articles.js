@@ -24,4 +24,37 @@ router.get(
   })
 );
 
+router.post(
+  "/new",
+  asyncHandler(async (req, res) => {
+    const newArticle = await db.Article.create(req.body);
+    res.json(newArticle);
+  })
+);
+
+router.put(
+  "/:id/edit",
+  asyncHandler(async (req, res) => {
+    const { title, body } = req.body;
+    const article = await db.Article.findByPk(req.params.id);
+
+    await article.update({
+      title,
+      body,
+    });
+
+    return res.json(article);
+  })
+);
+
+router.delete(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    const id = req.params.id;
+    const deleteArticle = await db.Article.findByPk(id);
+    await deleteArticle.destroy();
+    return res.json({ id });
+  })
+);
+
 module.exports = router;

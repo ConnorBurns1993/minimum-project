@@ -11,8 +11,8 @@ const EditArticleForm = () => {
   const { articleId } = useParams();
   const article = useSelector((state) => state.articles[articleId]);
 
-  const [title, setTitle] = useState(article.title);
-  const [body, setBody] = useState(article.body);
+  const [title, setTitle] = useState(article?.title);
+  const [body, setBody] = useState(article?.body);
   const [errors, setErrors] = useState([]);
 
   const updateTitle = (e) => setTitle(e.target.value);

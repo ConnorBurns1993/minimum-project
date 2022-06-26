@@ -1,7 +1,7 @@
 import { addArticle } from "../../store/article";
 import { useSelector, useDispatch } from "react-redux";
-import { useState } from "react";
-import { useHistory, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
 import "./AddArticleForm.css";
 
 const AddArticleForm = () => {
@@ -22,12 +22,11 @@ const AddArticleForm = () => {
       body,
     };
 
-    dispatch(addArticle(newArticle))
-      .then(() => history.push(`/articles`))
-      .catch(async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
-      });
+    dispatch(addArticle(newArticle)).catch(async (res) => {
+      const data = await res.json();
+      if (data && data.errors) setErrors(data.errors);
+    });
+    history.push(`/articles`);
   };
 
   const handleCancelClick = (e) => {
@@ -37,11 +36,6 @@ const AddArticleForm = () => {
 
   return (
     <>
-      <div className="mock-header">
-        <NavLink exact to="/">
-          <img src="../../public/images/favicon.svg" alt=""></img>
-        </NavLink>
-      </div>
       <form onSubmit={(e) => handleSubmit(e)}>
         <ul>
           {errors.map((error, idx) => (

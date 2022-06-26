@@ -51,7 +51,7 @@ router.delete(
   "/:id",
   asyncHandler(async (req, res) => {
     const id = req.params.id;
-    const deleteArticle = await Business.findByPk(id);
+    const deleteArticle = await db.Article.findByPk(id);
     await deleteArticle.destroy();
     return res.json({ id });
   })

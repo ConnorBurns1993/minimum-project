@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Modal } from "../../context/Modal";
-import DeleteArticleConfirmation from "./DeleteArticle";
+import DeleteCommentConfirmation from "./DeleteArticle";
 
-function DeleteArticleModal() {
+function DeleteCommentModal() {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -10,11 +10,11 @@ function DeleteArticleModal() {
       <button onClick={() => setShowModal(true)}></button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <DeleteArticleConfirmation />
+          <DeleteCommentConfirmation />
         </Modal>
       )}
     </>
   );
 }
 
-export default DeleteArticleModal;
+export default DeleteCommentModal;

@@ -1,10 +1,10 @@
 import { csrfFetch } from "./csrf";
 import { ValidationError } from "../utils/validationError";
 
-const ADD_COMMENT = "articles/ADD_COMMENT";
-const LOAD_COMMENTS = "articles/LOAD_COMMENTS";
-const UPDATE_COMMENT = "articles/UPDATE_COMMENT";
-const DELETE_COMMENT = "articles/DELETE_COMMENT";
+const ADD_COMMENT = "comments/ADD_COMMENT";
+const LOAD_COMMENTS = "comments/LOAD_COMMENTS";
+const UPDATE_COMMENT = "comments/UPDATE_COMMENT";
+const DELETE_COMMENT = "comments/DELETE_COMMENT";
 
 const add = (comment) => {
   return {
@@ -76,7 +76,7 @@ export const addComment = (newComment) => async (dispatch) => {
 };
 
 export const updateComment = (comment) => async (dispatch) => {
-  const response = await csrfFetch(`/api/comments/${comment.id}/edit`, {
+  const response = await csrfFetch(`/api/comments/${comment.id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(comment),

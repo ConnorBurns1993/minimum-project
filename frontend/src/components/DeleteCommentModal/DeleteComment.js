@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { destroyComment } from "../../store/comment";
 import { useHistory } from "react-router-dom";
 
-const DeleteCommentConfirmation = ({ articleId, comment }) => {
+const DeleteCommentConfirmation = ({ articleId, comment, setOpenModal }) => {
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -12,7 +12,8 @@ const DeleteCommentConfirmation = ({ articleId, comment }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     history.push(`/articles/${articleId}`);
-    return dispatch(destroyComment(comment?.id));
+    dispatch(destroyComment(comment?.id));
+    return setOpenModal(false);
   };
 
   return (

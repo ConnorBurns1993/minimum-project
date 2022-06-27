@@ -6,13 +6,15 @@ import DeleteArticleConfirmation from "../DeleteArticleModal/DeleteArticle";
 import { NavLink } from "react-router-dom";
 import { Modal } from "../../context/Modal";
 import "./SingleArticle.css";
+import CommentsByArticle from "../CommentsByArticle";
+import AddCommentForm from "../AddCommentForm";
 
 const SingleArticle = () => {
   const dispatch = useDispatch();
   const { articleId } = useParams();
-  // const history = useHistory();
 
   const article = useSelector((state) => state.articles[articleId]);
+  const comments = useSelector((state) => state.comments);
   const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
@@ -26,7 +28,7 @@ const SingleArticle = () => {
           <h2>{article?.title}</h2>
           <p>{article?.body}</p>
           <NavLink to={`/articles/${article?.id}/edit`} exact>
-            <button className="fas fa-solid fa-pen-to-square"></button>
+            <button className="fas fa-solid fa-pen"></button>
           </NavLink>
           <button
             className="fas fa-solid fa-trash"
@@ -39,6 +41,8 @@ const SingleArticle = () => {
           )}
         </div>
       )}
+      {comments && <CommentsByArticle />}
+      <AddCommentForm articleId={articleId} />
     </div>
   );
 };

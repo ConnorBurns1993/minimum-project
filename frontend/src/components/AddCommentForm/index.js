@@ -19,24 +19,27 @@ const AddCommentForm = ({ articleId }) => {
       body,
     };
 
-    dispatch(addComment(newComment)).then(() =>
-      history.push(`/articles/${articleId}`).catch(async (res) => {
+    dispatch(addComment(newComment))
+      .then(() => history.push(`/articles/${articleId}`), setErrors([]))
+      .catch(async (res) => {
         const data = await res.json();
         if (data && data.errors) setErrors(data.errors);
-      })
-    );
+      });
+    setBody("");
   };
 
   return (
     <div>
       <ul>
         {errors.map((error, idx) => (
-          <li key={idx}>{error}</li>
+          <li key={idx} className="comment-errors">
+            {error}
+          </li>
         ))}
       </ul>
       <textarea
         className="textarea-add-comment"
-        placeholder="Leave your comment here..."
+        placeholder=""
         value={body}
         onFocus={(e) => (e.target.placeholder = "")}
         onChange={(e) => setBody(e.target.value)}

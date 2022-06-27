@@ -28,12 +28,12 @@ const EditCommentForm = ({ setCommentForm, comment }) => {
     };
 
     dispatch(updateComment(editComment))
-      .then(() => history.push(`/articles/${articleId}`))
+      .then(() => history.push(`/articles/${articleId}`), setErrors([]))
+      .then(() => setCommentForm(false))
       .catch(async (res) => {
         const data = await res.json();
         if (data && data.errors) setErrors(data.errors);
       });
-    setCommentForm(false);
   };
 
   const handleCancelClick = (e) => {
@@ -46,7 +46,9 @@ const EditCommentForm = ({ setCommentForm, comment }) => {
       <form onSubmit={(e) => handleSubmit(e)}>
         <ul>
           {errors.map((error, idx) => (
-            <li key={idx}>{error}</li>
+            <li key={idx} className="comment-errors">
+              {error}
+            </li>
           ))}
         </ul>
 

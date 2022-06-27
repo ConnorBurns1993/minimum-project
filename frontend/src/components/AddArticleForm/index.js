@@ -1,7 +1,7 @@
 import { addArticle } from "../../store/article";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./AddArticleForm.css";
 
 const AddArticleForm = () => {
@@ -22,11 +22,12 @@ const AddArticleForm = () => {
       body,
     };
 
-    dispatch(addArticle(newArticle)).catch(async (res) => {
-      const data = await res.json();
-      if (data && data.errors) setErrors(data.errors);
-    });
-    history.push(`/articles`);
+    dispatch(addArticle(newArticle))
+      .then(() => history.push("/articles"))
+      .catch(async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      });
   };
 
   const handleCancelClick = (e) => {

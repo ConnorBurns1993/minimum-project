@@ -24,8 +24,26 @@ router.get(
   })
 );
 
+const validateArticle = [
+  check("title")
+    .exists({ checkFalsy: true })
+    .withMessage("Article must have a title.")
+    .isLength({ max: 200 })
+    .withMessage("Article titles cannot be longer that 200 characters.")
+    .isLength({ min: 10 })
+    .withMessage("Article titles must be atleast 10 characters long."),
+  check("body")
+    .exists({ checkFalsy: true })
+    .withMessage("Article must have content.")
+    .isLength({ min: 10 })
+    .withMessage("Article content must be atleast 10 characters long."),
+
+  handleValidationErrors,
+];
+
 router.post(
   "/new",
+  validateArticle,
   asyncHandler(async (req, res) => {
     const newArticle = await db.Article.create(req.body);
     res.json(newArticle);
@@ -34,6 +52,7 @@ router.post(
 
 router.put(
   "/:id/edit",
+  validateArticle,
   asyncHandler(async (req, res) => {
     const { title, body } = req.body;
     const article = await db.Article.findByPk(req.params.id);

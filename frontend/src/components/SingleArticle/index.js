@@ -15,6 +15,7 @@ const SingleArticle = () => {
 
   const article = useSelector((state) => state.articles[articleId]);
   const comments = useSelector((state) => state.comments);
+  const sessionUser = useSelector((state) => state.session.user);
   const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
@@ -27,13 +28,17 @@ const SingleArticle = () => {
         <div>
           <h2>{article?.title}</h2>
           <p>{article?.body}</p>
-          <NavLink to={`/articles/${article?.id}/edit`} exact>
-            <button className="fas fa-solid fa-pen"></button>
-          </NavLink>
-          <button
-            className="fas fa-solid fa-trash"
-            onClick={() => setOpenModal(true)}
-          ></button>
+          {sessionUser.id === article.userId && (
+            <div>
+              <NavLink to={`/articles/${article?.id}/edit`} exact>
+                <button className="fas fa-solid fa-pen"></button>
+              </NavLink>
+              <button
+                className="fas fa-solid fa-trash"
+                onClick={() => setOpenModal(true)}
+              ></button>
+            </div>
+          )}
           {openModal && (
             <Modal onClose={() => setOpenModal(false)}>
               <DeleteArticleConfirmation article={article} />
@@ -41,7 +46,7 @@ const SingleArticle = () => {
           )}
         </div>
       )}
-      {comments && <CommentsByArticle />}
+      {comments && <CommentsByArticle sessionUser={sessionUser} />}
       <AddCommentForm articleId={articleId} />
     </div>
   );

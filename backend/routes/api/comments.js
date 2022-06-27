@@ -9,6 +9,18 @@ const db = require("../../db/models");
 
 const router = express.Router();
 
+const validateComment = [
+  check("body")
+    .exists({ checkFalsy: true })
+    .withMessage("Comments must have content.")
+    .isLength({ min: 2 })
+    .withMessage("Comments must have atleast 2 characters.")
+    .isLength({ max: 300 })
+    .withMessage("Comments cannot be longer than 300 characters."),
+
+  handleValidationErrors,
+];
+
 router.get(
   "/:articleId",
   asyncHandler(async (req, res) => {
@@ -22,6 +34,7 @@ router.get(
 
 router.post(
   "/",
+  validateComment,
   asyncHandler(async (req, res) => {
     const newComment = await db.Comment.create(req.body);
     res.json(newComment);
@@ -30,6 +43,7 @@ router.post(
 
 router.put(
   "/:id",
+  validateComment,
   asyncHandler(async (req, res) => {
     const { body } = req.body;
     const comment = await db.Comment.findByPk(req.params.id);

@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import SingleArticle from "./components/SingleArticle";
 import AddArticleForm from "./components/AddArticleForm";
 import EditArticleForm from "./components/EditArticleForm";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path="/articles/:articleId/edit" exact>
             <EditArticleForm />
+          </Route>
+          <Route>
+            <PageNotFound />
           </Route>
         </Switch>
       )}

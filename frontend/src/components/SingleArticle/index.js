@@ -28,7 +28,7 @@ const SingleArticle = () => {
         <div>
           <h2>{article?.title}</h2>
           <p>{article?.body}</p>
-          {sessionUser.id === article.userId && (
+          {sessionUser?.id === article?.userId && (
             <div>
               <NavLink to={`/articles/${article?.id}/edit`} exact>
                 <button className="fas fa-solid fa-pen"></button>

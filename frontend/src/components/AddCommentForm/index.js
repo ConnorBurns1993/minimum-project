@@ -5,7 +5,7 @@ import { addComment } from "../../store/comment";
 import "./AddCommentForm.css";
 
 const AddCommentForm = ({ articleId }) => {
-  const { id } = useSelector((state) => state.session.user);
+  const sessionUser = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -13,19 +13,23 @@ const AddCommentForm = ({ articleId }) => {
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = async () => {
-    const newComment = {
-      userId: id,
-      articleId,
-      body,
-    };
+    if (sessionUser) {
+      const newComment = {
+        userId: sessionUser.id,
+        articleId,
+        body,
+      };
 
-    dispatch(addComment(newComment))
-      .then(() => history.push(`/articles/${articleId}`), setErrors([]))
-      .catch(async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
-      });
-    setBody("");
+      dispatch(addComment(newComment))
+        .then(() => history.push(`/articles/${articleId}`), setErrors([]))
+        .catch(async (res) => {
+          const data = await res.json();
+          if (data && data.errors) setErrors(data.errors);
+        });
+      setBody("");
+    } else {
+      setErrors(["You must be logged in to comment!"]);
+    }
   };
 
   return (

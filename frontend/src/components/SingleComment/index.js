@@ -11,7 +11,7 @@ const SingleComment = ({ comment, articleId, sessionUser }) => {
     <li key={comment?.id}>
       <p>{comment?.User?.name}</p>
       <p>{comment?.body}</p>
-      {sessionUser.id === comment.userId && (
+      {sessionUser?.id === comment?.userId && (
         <button
           className="fas fa-solid fa-pen"
           onClick={() => setCommentForm(true)}
@@ -20,7 +20,7 @@ const SingleComment = ({ comment, articleId, sessionUser }) => {
       {commentForm && (
         <EditCommentForm comment={comment} setCommentForm={setCommentForm} />
       )}
-      {sessionUser.id === comment.userId && (
+      {sessionUser?.id === comment?.userId && (
         <button
           className="fas fa-solid fa-trash"
           onClick={() => setOpenModal(true)}

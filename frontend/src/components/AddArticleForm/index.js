@@ -37,25 +37,27 @@ const AddArticleForm = () => {
 
   return (
     <>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <ul>
-          {errors.map((error, idx) => (
-            <li key={idx}>{error}</li>
-          ))}
-        </ul>
-        <input
-          placeholder="Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        ></input>
-        <input
-          placeholder="Write your article here..."
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
-        ></input>
-        <button onClick={handleSubmit}>Submit</button>
-        <button onClick={handleCancelClick}>Cancel</button>
-      </form>
+      {sessionUser && (
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <ul>
+            {errors.map((error, idx) => (
+              <li key={idx}>{error}</li>
+            ))}
+          </ul>
+          <input
+            placeholder="Title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          ></input>
+          <input
+            placeholder="Write your article here..."
+            value={body}
+            onChange={(e) => setBody(e.target.value)}
+          ></input>
+          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={handleCancelClick}>Cancel</button>
+        </form>
+      )}
     </>
   );
 };

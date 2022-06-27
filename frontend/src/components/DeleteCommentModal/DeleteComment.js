@@ -7,8 +7,6 @@ const DeleteCommentConfirmation = ({ articleId, comment, setOpenModal }) => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  console.log(comment);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     history.push(`/articles/${articleId}`);

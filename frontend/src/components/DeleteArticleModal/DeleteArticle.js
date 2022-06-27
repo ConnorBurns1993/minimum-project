@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 const DeleteArticleConfirmation = ({ article }) => {
   const dispatch = useDispatch();
   const history = useHistory();
-  console.log(article.id);
 
   const handleSubmit = (e) => {
     e.preventDefault();

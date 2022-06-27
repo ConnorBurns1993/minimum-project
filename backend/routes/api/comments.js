@@ -16,7 +16,6 @@ router.get(
       where: { articleId: req.params.articleId },
       include: [{ model: User }],
     });
-    console.log(comments);
     return res.json(comments);
   })
 );

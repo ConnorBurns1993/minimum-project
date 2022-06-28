@@ -1,0 +1,99 @@
+.sign-up-home {
+    border-radius: 4px;
+    background-color: #000000;
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: small;
+    padding: .5%;
+    padding-right: 1%;
+    width: 6%;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .sign-up-home{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+.sign-up-home:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 8px;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .sign-up-home:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+
+  .sign-up-home:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+  .sign-up-form{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    height: 60vh;
+    border: 1px solid black;
+  }
+
+  .sign-up-h2{
+    font-size: 60px;
+    font-weight: 600;
+  }
+
+  .sign-up-inputs {
+    font-weight: bolder;
+    width: 40%;
+    position: relative;
+    bottom: 10%;
+    /* font-family: sans-serif; */
+  }
+
+  input{
+    margin-top: 1%;
+  }
+
+  .sign-up-p{
+    font-size: 11px;
+    font-family: sans-serif;
+    position: relative;
+    bottom: 6%;
+  }
+
+  .sign-up-modal {
+    border-radius: 4px;
+    background-color: rgb(30,30,30);
+    border: 1px solid rgb(30,30,30);
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: small;
+    padding-right: 7%;
+    width: 25%;
+    padding: 2%;
+    cursor: pointer;
+    position: relative;
+    bottom: 8%;
+    right: 2%;
+  }
+
+  .sign-up-modal:hover {
+    background-color: black
+}
+
+.errors-sign-up {
+    font-size: 11px;
+    position: relative;
+    bottom: 205%;
+    right: 5%;
+}

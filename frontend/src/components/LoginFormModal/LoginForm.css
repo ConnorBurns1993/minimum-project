@@ -1,0 +1,70 @@
+.log-in-home {
+border: none;
+cursor: pointer;
+background-color: white;
+}
+
+  .log-in-home{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+
+  .log-in-form{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    height: 50vh;
+    border: 1px solid black;
+  }
+
+  .log-in-h2{
+    font-size: 60px;
+    font-weight: 600;
+  }
+
+  .log-in-inputs {
+    font-weight: bolder;
+    width: 40%;
+    position: relative;
+    bottom: 15%;
+    margin: 3%;
+    left: 27%
+  }
+
+  .log-in-p{
+    font-size: 11px;
+    font-family: sans-serif;
+    position: relative;
+    bottom: 12%;
+  }
+
+  .log-in-modal {
+    border-radius: 4px;
+    background-color: rgb(30,30,30);
+    border: 1px solid rgb(30,30,30);
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: small;
+    padding-right: 7%;
+    width: 25%;
+    padding: 2%;
+    cursor: pointer;
+    position: relative;
+    bottom: 8%;
+    right: 2%;
+  }
+
+  .log-in-modal:hover {
+    background-color: black
+}
+
+.errors-log-in {
+    font-size: 10px;
+    position: relative;
+    bottom: 790%;
+    right: 15%;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
 import LoginFormModal from "../LoginFormModal";
@@ -8,6 +8,7 @@ import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
   const sessionUser = useSelector((state) => state.session.user);
+  const history = useHistory();
 
   let sessionLinks;
   if (sessionUser) {
@@ -21,15 +22,28 @@ function Navigation({ isLoaded }) {
     );
   }
 
+  const handleClick = () => {
+    if (sessionUser) {
+      history.push("/articles");
+    } else {
+      history.push("/");
+    }
+  };
+
   return (
-    <ul style={{ listStyle: "none" }}>
-      <li>
-        <NavLink exact to="/articles">
-          <img alt="" className="home-logo" src="./images/favicon.svg"></img>
-        </NavLink>
-        {isLoaded && sessionLinks}
-      </li>
-    </ul>
+    <div className="header-home">
+      <ul className="nav-home-ul" style={{ listStyle: "none" }}>
+        <li className="nav-home-li">
+          <img
+            alt=""
+            className="home-logo"
+            onClick={handleClick}
+            src="./images/favicon.svg"
+          ></img>
+          <div className="nav-buttons-wrapper">{isLoaded && sessionLinks}</div>
+        </li>
+      </ul>
+    </div>
   );
 }
 

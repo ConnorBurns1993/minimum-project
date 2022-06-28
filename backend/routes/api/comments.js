@@ -37,7 +37,11 @@ router.post(
   validateComment,
   asyncHandler(async (req, res) => {
     const newComment = await db.Comment.create(req.body);
-    res.json(newComment);
+    const commentWithUser = await db.Comment.findOne({
+      where: { id: newComment.id },
+      include: [{ model: User }],
+    });
+    res.json(commentWithUser);
   })
 );
 

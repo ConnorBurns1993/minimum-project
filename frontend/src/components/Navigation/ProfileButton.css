@@ -1,0 +1,75 @@
+.profile-button {
+    background-color: white;
+    border: none;
+    font-size: 30px;
+    color: rgb(146, 146, 146);
+    transition: color .5s;
+}
+
+.profile-button:hover{
+    color: black;
+}
+
+.profile-button-solid{
+    background-color: white;
+    border: none;
+    font-size: 30px;
+    color: black;
+    transition: color .5s;
+}
+
+.profile-dropdown{
+    background-color: white;
+    border: 1px solid black;
+    width: 6%;
+    position: absolute;
+    left: 92%;
+    border-radius: 5px;
+    z-index: 2;
+    list-style:none;
+    text-align: left;
+    font-size: 15px;
+    /* font-weight: bold; */
+    height: 10vh;
+}
+
+.dropdown-name {
+    position: relative;
+    top: 10%;
+    right: 5%;
+    text-decoration: underline;
+    margin-bottom: 15%;
+
+}
+
+.write-article {
+    color: rgb(146, 146, 146);
+    position: relative;
+    margin-right: 25%;
+    margin-left: 10%;
+    margin-top: 3.5%;
+    cursor: pointer;
+    transition: color .5s;
+    font-size: 35px;
+    text-decoration: none;
+
+}
+
+.logout {
+    color: rgb(146, 146, 146);
+    cursor: pointer;
+    transition: color .5s;
+    font-size: 35px;
+}
+
+.write-article:hover,
+.logout:hover {
+    color:black;
+    cursor: pointer;
+}
+
+.logout-article-wrapper {
+    display: inline-flex;
+    position: relative;
+    right: 10%;
+}

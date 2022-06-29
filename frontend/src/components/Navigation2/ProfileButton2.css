@@ -1,0 +1,91 @@
+.profile-button-2,
+.edit-button-2,
+.home-button-2 {
+    background-color: white;
+    border: none;
+    font-size: 30px;
+    color: rgb(75,75,75);
+    transition: color .5s;
+}
+
+.profile-button-2:hover,
+.edit-button-2:hover,
+.home-button-2:hover {
+    color: black;
+}
+
+.profile-button-solid-2 {
+    background-color: white;
+    border: none;
+    font-size: 30px;
+    color: black;
+    transition: color .5s;
+}
+
+.profile-dropdown-2{
+    background-color: white;
+    border: 1px solid black;
+    width: 6%;
+    position: absolute;
+    left: 92%;
+    border-radius: 5px;
+    z-index: 2;
+    list-style:none;
+    text-align: left;
+    font-size: 15px;
+    height: 10vh;
+}
+
+.dropdown-name-2 {
+    position: relative;
+    top: 10%;
+    right: 5%;
+    text-decoration: underline;
+    margin-bottom: 15%;
+}
+
+.write-article-2 {
+    color: rgb(146, 146, 146);
+    position: relative;
+    margin-right: 25%;
+    margin-left: 10%;
+    margin-top: 3.5%;
+    cursor: pointer;
+    transition: color .5s;
+    font-size: 35px;
+    text-decoration: none;
+
+}
+
+.logout-2 {
+    color: rgb(146, 146, 146);
+    cursor: pointer;
+    transition: color .5s;
+    font-size: 35px;
+}
+
+.write-article-2:hover,
+.logout-2:hover {
+    color:black;
+    cursor: pointer;
+}
+
+.logout-article-wrapper-2 {
+    display: inline-flex;
+    position: relative;
+    right: 10%;
+}
+
+.nav-buttons-2 {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    position: relative;
+    left: 540%;
+    justify-content: space-between;
+    margin-top: 600%;
+}
+
+.gray-line {
+    color: rgb(201, 201, 201)
+}

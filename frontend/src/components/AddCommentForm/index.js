@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { addComment } from "../../store/comment";
 import "./AddCommentForm.css";
 
-const AddCommentForm = ({ articleId }) => {
+const AddCommentForm = ({ showComments, articleId }) => {
   const sessionUser = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -32,25 +32,31 @@ const AddCommentForm = ({ articleId }) => {
     }
   };
 
-  return (
-    <div>
-      <ul>
-        {errors.map((error, idx) => (
-          <li key={idx} className="comment-errors">
-            {error}
-          </li>
-        ))}
-      </ul>
-      <textarea
-        className="textarea-add-comment"
-        placeholder=""
-        value={body}
-        onFocus={(e) => (e.target.placeholder = "")}
-        onChange={(e) => setBody(e.target.value)}
-      ></textarea>
-      <button onClick={() => handleSubmit()}>Submit</button>
-    </div>
-  );
+  if (showComments)
+    return (
+      <div className="add-a-comment-wrapper">
+        <ul className="add-a-comment-ul">
+          {errors.map((error, idx) => (
+            <li key={idx} className="add-a-comment-errors">
+              {error}
+            </li>
+          ))}
+        </ul>
+        <p className="add-a-comment-p">Add a Comment:</p>
+        <div className="inner-comment-wrapper">
+          <textarea
+            className="textarea-add-comment"
+            placeholder=""
+            value={body}
+            onFocus={(e) => (e.target.placeholder = "")}
+            onChange={(e) => setBody(e.target.value)}
+          ></textarea>
+          <button className="add-comment-submit" onClick={() => handleSubmit()}>
+            Submit
+          </button>
+        </div>
+      </div>
+    );
 };
 
 export default AddCommentForm;

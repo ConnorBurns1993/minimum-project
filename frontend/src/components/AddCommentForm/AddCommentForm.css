@@ -1,0 +1,10 @@
+.textarea-add-comment {
+    position: relative;
+    left: 50%;
+    resize: none;
+}
+
+.add-comment-submit {
+    position: relative;
+    left: 50%;
+}

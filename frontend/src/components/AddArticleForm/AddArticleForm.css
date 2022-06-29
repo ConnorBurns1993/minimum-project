@@ -1,0 +1,50 @@
+.add-article-form {
+    position: relative;
+    left: 30%
+}
+
+.add-a-comment-p {
+    position: relative;
+    left: 23%;
+    font-family: sans-serif;
+    margin-bottom: .3%;
+    text-indent: 10px;
+    font-size: small
+}
+
+.add-a-comment-errors {
+    position: relative;
+    left: 30%;
+    font-size: x-small;
+}
+
+.textarea-add-comment {
+    width: 35vw;
+    height: 12vh;
+    position: relative;
+    padding: 1%;
+    resize: none;
+}
+
+.inner-comment-wrapper {
+    position: relative;
+    right: 27%
+}
+
+.add-a-comment-ul {
+    margin-top: 5%
+}
+
+.add-comment-submit {
+    position: relative;
+    margin-bottom: 5%;
+    border: solid black 100px;
+    z-index: 1;
+    font-size: x-small;
+    font-weight: 600;
+    right: -5%;
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}

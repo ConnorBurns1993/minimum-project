@@ -21,45 +21,41 @@
 .profile-dropdown{
     background-color: white;
     border: 1px solid black;
-    width: 6%;
+    width: 8vw;
     position: absolute;
-    left: 92%;
-    border-radius: 5px;
+    left: 93.2%;
+    border-radius: 3px;
     z-index: 2;
     list-style:none;
     text-align: left;
     font-size: 15px;
-    /* font-weight: bold; */
-    height: 10vh;
+    height: 5vh;
+    box-shadow: 3px 3px #0000005e;
 }
 
 .dropdown-name {
     position: relative;
-    top: 10%;
-    right: 5%;
-    text-decoration: underline;
-    margin-bottom: 15%;
-
-}
-
-.write-article {
-    color: rgb(146, 146, 146);
-    position: relative;
-    margin-right: 25%;
-    margin-left: 10%;
-    margin-top: 3.5%;
-    cursor: pointer;
-    transition: color .5s;
-    font-size: 35px;
-    text-decoration: none;
-
+    top: 30%;
+    right: 10%;
+    padding:.5%;
+    font-size: large;
 }
 
 .logout {
-    color: rgb(146, 146, 146);
+    color: rgb(75, 75, 75);
     cursor: pointer;
     transition: color .5s;
-    font-size: 35px;
+    font-size: 15px;
+    position: relative;
+    left: 350%;
+    padding-top: 20%;
+}
+
+.logout-dropdown {
+    font-family: sans-serif;
+    font-size: 8px;
+    position: absolute;
+
 }
 
 .write-article:hover,
@@ -69,7 +65,8 @@
 }
 
 .logout-article-wrapper {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     position: relative;
     right: 10%;
 }

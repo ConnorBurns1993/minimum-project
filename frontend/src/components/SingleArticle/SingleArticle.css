@@ -1,0 +1,39 @@
+.single-article-wrapper{
+    position: relative;
+    left: 7%;
+    padding-top: 7%;
+    width: 75%;
+
+}
+
+.single-article-h2{
+    text-align: center;
+    margin-bottom: 4%;
+    font-size: 40px;
+    font-family: sans-serif;
+    width: 75%;
+}
+
+.single-article-p {
+    line-height: 1.6em;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.single-article-p::first-letter {
+    font-size: 50px;
+}
+
+.author{
+    position: relative;
+    left: 80%;
+    font-size: small;
+    margin-top: 1.5%;
+}
+
+.gray-line2 {
+        color:rgb(201, 201, 201);
+        position: relative;
+        left: 30%;
+        margin-top: 3%;
+}

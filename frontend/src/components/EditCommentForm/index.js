@@ -52,15 +52,22 @@ const EditCommentForm = ({ setCommentForm, comment }) => {
           ))}
         </ul>
 
-        <input
+        <textarea
+          className="edit-comment-body"
           value={body}
           onChange={updateBody}
           //   onBlur={handleCancelClick}
-        ></input>
-        <button onClick={handleSubmit} type="submit">
+        ></textarea>
+        <button
+          className="submit-edit-form"
+          onClick={handleSubmit}
+          type="submit"
+        >
           Submit
         </button>
-        <button onClick={handleCancelClick}>Cancel</button>
+        <button className="cancel-edit-form" onClick={handleCancelClick}>
+          Cancel
+        </button>
       </form>
     </>
   );

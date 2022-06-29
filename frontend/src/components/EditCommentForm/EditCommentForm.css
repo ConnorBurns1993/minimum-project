@@ -1,0 +1,22 @@
+.edit-comment-body {
+    width: 35vw;
+    height: 12vh;
+    position: relative;
+    bottom: 160px;
+    right: 1%;
+    padding: 1%;
+    resize: none;
+}
+
+.submit-edit-form,
+.cancel-edit-form {
+    position: relative;
+    right: 7%;
+    bottom: 161px;
+    font-size: x-small;
+    font-weight: 600;
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}

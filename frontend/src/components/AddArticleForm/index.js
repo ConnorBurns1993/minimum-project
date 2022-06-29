@@ -38,7 +38,7 @@ const AddArticleForm = () => {
   return (
     <>
       {sessionUser && (
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form className="add-article-form" onSubmit={(e) => handleSubmit(e)}>
           <ul>
             {errors.map((error, idx) => (
               <li key={idx}>{error}</li>

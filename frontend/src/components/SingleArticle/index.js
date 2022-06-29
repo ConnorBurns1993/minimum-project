@@ -17,6 +17,8 @@ const SingleArticle = () => {
   const comments = useSelector((state) => state.comments);
   const sessionUser = useSelector((state) => state.session.user);
   const [openModal, setOpenModal] = useState(false);
+  const [showComments, setShowComments] = useState(false);
+  const [showCommentsText, setShowCommentsText] = useState("Show Comments");
 
   useEffect(() => {
     dispatch(loadOneArticle(articleId));
@@ -26,8 +28,14 @@ const SingleArticle = () => {
     <div>
       {article && (
         <div>
-          <h2>{article?.title}</h2>
-          <p>{article?.body}</p>
+          <div className="single-article-wrapper">
+            <h2 className="single-article-h2">{article?.title}</h2>
+            <p className="single-article-p">{article?.body}</p>
+            <p className="author">By {article?.User?.name}</p>
+            <p className="gray-line2">
+              __________________________________________________________________
+            </p>
+          </div>
           {sessionUser?.id === article?.userId && (
             <div>
               <NavLink to={`/articles/${article?.id}/edit`} exact>
@@ -46,8 +54,16 @@ const SingleArticle = () => {
           )}
         </div>
       )}
-      {comments && <CommentsByArticle sessionUser={sessionUser} />}
-      <AddCommentForm articleId={articleId} />
+      {comments && (
+        <CommentsByArticle
+          showComments={showComments}
+          setShowComments={setShowComments}
+          showCommentsText={showCommentsText}
+          setShowCommentsText={setShowCommentsText}
+          sessionUser={sessionUser}
+        />
+      )}
+      <AddCommentForm showComments={showComments} articleId={articleId} />
     </div>
   );
 };

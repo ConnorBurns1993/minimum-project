@@ -25,33 +25,32 @@ function App() {
   //   });
   // });
 
-  const home = history.listen((location) => {
-    if (location.pathname === "/") return true;
-    else return false;
-  });
-
   return (
     <>
-      {home && <Navigation isLoaded={isLoaded} />}
-      <Navigation2 isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
           <Route path="/" exact>
+            <Navigation isLoaded={isLoaded} />
             <Home />
           </Route>
           <Route path="/articles" exact>
+            <Navigation2 isLoaded={isLoaded} />
             <ArticleList />
           </Route>
           <Route path="/articles/new" exact>
+            <Navigation2 isLoaded={isLoaded} />
             <AddArticleForm />
           </Route>
           <Route path="/articles/:articleId" exact>
+            <Navigation2 isLoaded={isLoaded} />
             <SingleArticle />
           </Route>
           <Route path="/articles/:articleId/edit" exact>
+            <Navigation2 isLoaded={isLoaded} />
             <EditArticleForm />
           </Route>
           <Route>
+            <Navigation2 isLoaded={isLoaded} />
             <PageNotFound />
           </Route>
         </Switch>

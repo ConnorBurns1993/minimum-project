@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { destroyComment } from "../../store/comment";
 import { useHistory } from "react-router-dom";
+import "./DeleteComment.css";
 
 const DeleteCommentConfirmation = ({ articleId, comment, setOpenModal }) => {
   const dispatch = useDispatch();
@@ -15,13 +16,16 @@ const DeleteCommentConfirmation = ({ articleId, comment, setOpenModal }) => {
   };
 
   return (
-    <>
-      <p>
+    <div className="delete-form">
+      <h2 className="delete-h2">Delete?</h2>
+      <p className="delete-p">
         Are you sure you want to delete your comment? This action is
         irreversible.
       </p>
-      <button onClick={handleSubmit}>Delete</button>
-    </>
+      <button className="delete-modal" onClick={handleSubmit}>
+        Delete
+      </button>
+    </div>
   );
 };
 

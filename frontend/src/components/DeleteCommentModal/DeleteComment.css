@@ -1,47 +1,37 @@
-.log-in-home {
-border: none;
-cursor: pointer;
-background-color: white;
-}
 
-  .log-in-home{
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-
-
-  .log-in-form{
+.delete-form{
     display: flex;
     flex-direction: column;
     width: 50vh;
-    height: 50vh;
+    height: 30vh;
     border: 1px solid black;
   }
 
-  .log-in-h2{
+  .delete-h2{
     font-size: 60px;
     font-weight: 600;
   }
 
-  .log-in-inputs {
+  .sign-up-inputs {
     font-weight: bolder;
     width: 40%;
     position: relative;
-    bottom: 15%;
-    margin: 3%;
-    left: 27%
+    bottom: 10%;
+    /* font-family: sans-serif; */
   }
 
-  .log-in-p{
+  input{
+    margin-top: 1%;
+  }
+
+  .delete-p{
     font-size: 11px;
     font-family: sans-serif;
     position: relative;
-    bottom: 12%;
+    bottom: 6%;
   }
 
-  .log-in-modal {
+  .delete-modal {
     border-radius: 4px;
     background-color: rgb(30,30,30);
     border: 1px solid rgb(30,30,30);
@@ -58,12 +48,6 @@ background-color: white;
     right: 2%;
   }
 
-  .log-in-modal:hover {
+  .delete-modal:hover {
     background-color: black
-}
-
-.errors-log-in {
-    font-size: 10px;
-    bottom: 790%;
-    right: 15%;
 }

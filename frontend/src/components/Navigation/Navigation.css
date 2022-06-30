@@ -1,4 +1,36 @@
+* {
+    margin: auto;
+}
+
 .home-logo {
-    width: 3%;
+    width: 2.5%;
     object-fit: cover;
+    top: 1%;
+    right: 77%;
+    bottom: 1%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.header-home{
+
+    border-bottom: solid 1px black;
+    padding-top: 1%;
+    z-index: 1;
+}
+
+.nav-buttons-wrapper{
+    position: relative;
+}
+
+.nav-home-li {
+    position: relative;
+    text-align: right;
+    right: 10%;
+}
+
+ul {
+    margin-bottom: .8%;
+
 }

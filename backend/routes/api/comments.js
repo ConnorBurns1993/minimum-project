@@ -37,7 +37,11 @@ router.post(
   validateComment,
   asyncHandler(async (req, res) => {
     const newComment = await db.Comment.create(req.body);
-    res.json(newComment);
+    const commentWithUser = await db.Comment.findOne({
+      where: { id: newComment.id },
+      include: [{ model: User }],
+    });
+    res.json(commentWithUser);
   })
 );
 
@@ -48,11 +52,15 @@ router.put(
     const { body } = req.body;
     const comment = await db.Comment.findByPk(req.params.id);
 
-    await comment.update({
+    const updatedComment = await comment.update({
       body,
     });
 
-    return res.json(comment);
+    const updatedCommentWithUser = await db.Comment.findOne({
+      where: { id: updatedComment.id },
+      include: [{ model: User }],
+    });
+    return res.json(updatedCommentWithUser);
   })
 );
 

@@ -1,0 +1,17 @@
+.comments-by-article-wrapper {
+    position: relative;
+    left: 24%;
+    margin-top: 3%;
+}
+
+.show-comments {
+    position: relative;
+    margin-top: 3%;
+    left: 80%;
+    font-size: x-small;
+    font-weight: 600;
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}

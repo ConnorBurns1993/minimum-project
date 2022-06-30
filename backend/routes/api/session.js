@@ -56,4 +56,17 @@ router.get("/", restoreUser, (req, res) => {
   } else return res.json({});
 });
 
+router.get(
+  "/demo-user",
+  asyncHandler(async (_req, res) => {
+    const user = await User.findOne({
+      where: {
+        email: "demo@user.io",
+      },
+    });
+    setTokenCookie(res, user);
+    return res.json({ user });
+  })
+);
+
 module.exports = router;

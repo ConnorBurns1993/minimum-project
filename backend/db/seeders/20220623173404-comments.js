@@ -9,32 +9,32 @@ module.exports = {
         {
           userId: 2,
           articleId: 1,
-          body: "Of course they are! You want your code to be as concise as possible so other developers can easily work off of your code.",
+          body: "Aut mollitia sapiente vel dolores accusantium et delectus fuga et fugit illo est dolor omnis?",
         },
         {
           userId: 3,
           articleId: 1,
-          body: "Hey, if it works it works! Let those other developers work on their debugging skills.",
+          body: "Ut vitae eveniet ut ullam perferendis quo exercitationem accusamus et excepturi dolores et tenetur exercitationem et sint natus. Vel similique quod in suscipit et dolor similique cum dolor dolor id voluptatem harum sit inventore consequuntur.",
         },
         {
           userId: 1,
           articleId: 2,
-          body: "I am just a demo user. I have no formal opinion.",
+          body: "Nam nobis soluta qui natus expedita et illum enim quo corporis sunt.",
         },
         {
           userId: 3,
           articleId: 2,
-          body: "Oh Dios mío, it is truly terrifying!",
+          body: "Et eaque quod aut vero libero sit quia maxime ut autem obcaecati!",
         },
         {
           userId: 1,
           articleId: 3,
-          body: "Yes, Duolingo is great. As a demo user, I wonder if I can insert an affiliate link here?",
+          body: "Et fuga voluptatem sed omnis magnam cum perspiciatis natus 33 voluptatem accusantium ut omnis quod!",
         },
         {
           userId: 2,
           articleId: 3,
-          body: "Way to go Carlos! I should start learning Mandarin...",
+          body: "Eos soluta consectetur ut itaque maiores quo adipisci obcaecati? Rem sint laborum nam dolor atque id tenetur tempora a itaque unde. Et neque officiis aut quaerat voluptate sit ipsa dicta.",
         },
       ],
       {}

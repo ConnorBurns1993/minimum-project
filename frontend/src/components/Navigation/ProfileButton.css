@@ -4,6 +4,7 @@
     font-size: 30px;
     color: rgb(146, 146, 146);
     transition: color .5s;
+    cursor:pointer;
 }
 
 .profile-button:hover{

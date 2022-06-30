@@ -48,14 +48,15 @@
 
 .add-comment-submit {
     position: relative;
-    margin-bottom: 5%;
+    margin-bottom: 5.1%;
     border: solid black 100px;
-    z-index: 1;
+    z-index: 2;
+    left: 47.3%;
     font-size: x-small;
     font-weight: 600;
     right: -5%;
     border: none;
-    background-color: transparent;
+    background-color: white;
     text-decoration: underline;
     cursor: pointer;
 }

@@ -15,10 +15,34 @@ Minimum is a project created by myself (Connor Burns) that is a clone of Medium,
 ![](https://camo.githubusercontent.com/ab4c3c731a174a63df861f7b118d6c8a6c52040a021a552628db877bd518fe84/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656163742d2532333230323332612e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d253233363144414642)
 ![](https://camo.githubusercontent.com/9a7c7ebbabb2096c0ad0cac6f64bc9fe93f4954a3ae3f51d6f3e076ba462aab1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656475782d2532333539336438382e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d7265647578266c6f676f436f6c6f723d7768697465)
 
-##Building Instructions
+## Building Instructions
 
-1. Download the repository from this GitHub repository.
-   - Navigate into both the frontend and backend directories and run npm install to download necessary dependencies.
-     - In the backend directory, create an .env file with appropriate corresponding data to the already existing .env.example file.
-       - Run npx dotenv sequelize db:migrate and npx dotenv sequelize db:seed:all to migrate and seed the database.
-         - In both the frontend and backend directories in seperate terminals, run npm start to start the server and to view the site on localhost 3000.
+- Download the repository from this GitHub repository.
+- Navigate into both the **frontend** and **backend** directories and run **npm install** to download necessary dependencies.
+- In the **backend** directory, create an **.env** file with appropriate corresponding data to the already existing **.env.example** file.
+- Run **npx dotenv sequelize db:migrate** and **npx dotenv sequelize db:seed:all** to migrate and seed the database.
+- In both the **frontend** and **backend** directories in seperate terminals, run **npm start** to start the server and to view the site on **localhost 3000**.
+
+## Demonstration
+
+#### Home Page:
+At the home page, you can either log in/sign up - or if you'd like you can start reading without logging in (some features will be disabled). 
+For ease of use, a demo user has been adding that you can click and will complete the log in process for you, allowing you full access to the site.
+![](https://user-images.githubusercontent.com/97809578/176768165-0521f3b9-e492-4f60-8079-9482737ff5d7.png)
+
+#### Articles Page:
+Once logged in you will be taken to all articles and from here you can view any article you'd like as well as write an article, logout, navigate to the landing page, etc.
+![Screenshot (113)](https://user-images.githubusercontent.com/97809578/176768423-e8278372-74ff-4784-bd2a-2534a4cbd75e.png)
+
+#### Single Article Page: 
+At the single article page, you can read your article and also view the comments for the article and add a comment if you'd like. Once created, you can edit/delete the comments you've made.
+![Screenshot (114)](https://user-images.githubusercontent.com/97809578/176768809-c60480d5-f66c-41ff-941b-a9b66aa9d319.png)
+![Screenshot (115)](https://user-images.githubusercontent.com/97809578/176768853-f560a2f9-7398-4fa7-b818-d2e4d05e6d47.png)
+
+#### Create an Article Page:
+If you click the pen on paper icon on the left sidebar, you will be directed to the create article page where you can create an article for yourself! If your article does not meet the specifications, you will be alerted via error handlers
+![Screenshot (116)](https://user-images.githubusercontent.com/97809578/176769067-9d7a539c-9038-4d9f-8b66-a5e79b1e14c7.png)
+
+## Conclusion
+
+Thank you for taking the time to view my repository and I hope you enjoyed!

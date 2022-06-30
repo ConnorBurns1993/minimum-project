@@ -1,7 +1,14 @@
 import React from "react";
+import "./PageNotFound.css";
 
 const PageNotFound = () => {
-  return <h1>The Page You Requested Cannot Be Found</h1>;
+  return (
+    <img
+      className="not-found"
+      alt=""
+      src="https://www.iowafieldreport.com/wp-content/uploads/2021/11/6M513.png"
+    ></img>
+  );
 };
 
 export default PageNotFound;

@@ -1,0 +1,75 @@
+.edit-article-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-article-title {
+    font-size: 50px;
+    border: none;
+    width: 77%;
+    margin-bottom: 1%;
+    position: relative;
+    left: 10%;
+}
+
+.edit-article-title:focus,
+.edit-article-body:focus {
+    outline: none;
+    border: none;
+}
+
+.edit-article-body {
+    resize: none;
+    font-size: 20px;
+    font-family: serif;
+    position: relative;
+    width: 55%;
+    height: 75vh;
+}
+
+.submit-edit-article,
+.cancel-edit-article {
+    border-radius: 4px;
+    background-color: rgb(30,30,30);
+    border: 1px solid rgb(30,30,30);
+    border-radius: 50px;
+    margin-top: 10%;
+    margin-bottom: 15%;
+    height: 5vh;
+    color: #fff;
+    text-align: center;
+    font-size: small;
+    width: 7vw;
+    padding: 2%;
+    cursor: pointer;
+    position: relative;
+}
+
+.submit-edit-article {
+    margin-right: 5%;
+}
+
+.submit-edit-article:hover,
+.cancel-edit-article:hover {
+    background-color: black
+}
+
+.edit-article-button-wrapper {
+    display: inline-flex;
+    position: relative;
+    left: 21%;
+}
+
+.edit-article-errors {
+    font-size: 10px;
+    width: 30vw;
+    height: 3vh;
+}
+
+.edit-article-ul-wrapper {
+    position: absolute;
+    top: 75%;
+    right: -9%;
+    z-index: 2;
+  }

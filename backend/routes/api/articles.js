@@ -61,7 +61,9 @@ router.put(
   validateArticle,
   asyncHandler(async (req, res) => {
     const { title, body } = req.body;
-    const article = await db.Article.findByPk(req.params.id);
+    const article = await db.Article.findByPk(req.params.id, {
+      include: [{ model: db.User }],
+    });
 
     await article.update({
       title,

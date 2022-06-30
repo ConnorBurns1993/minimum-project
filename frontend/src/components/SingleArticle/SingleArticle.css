@@ -37,3 +37,16 @@
         left: 30%;
         margin-top: 3%;
 }
+
+.article-edit,
+.article-delete {
+    background-color: white;
+    border: none;
+    position: relative;
+    color: rgb(75,75,75);
+}
+
+.article-edit:hover,
+.article-delete:hover {
+    color: black;
+}

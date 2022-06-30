@@ -37,12 +37,12 @@ const SingleArticle = () => {
             </p>
           </div>
           {sessionUser?.id === article?.userId && (
-            <div>
+            <div className="edit-delete-articles">
               <NavLink to={`/articles/${article?.id}/edit`} exact>
-                <button className="fas fa-solid fa-pen"></button>
+                <button className="fas fa-solid fa-pen article-edit"></button>
               </NavLink>
               <button
-                className="fas fa-solid fa-trash"
+                className="fas fa-solid fa-trash article-delete"
                 onClick={() => setOpenModal(true)}
               ></button>
             </div>

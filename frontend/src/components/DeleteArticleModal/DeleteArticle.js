@@ -14,13 +14,16 @@ const DeleteArticleConfirmation = ({ article }) => {
   };
 
   return (
-    <>
-      <p>
+    <div className="delete-form">
+      <h2 className="delete-h2">Delete?</h2>
+      <p className="delete-p">
         Are you sure you want to delete your article? This action is
         irreversible.
       </p>
-      <button onClick={handleSubmit}>Delete</button>
-    </>
+      <button className="delete-modal" onClick={handleSubmit}>
+        Delete
+      </button>
+    </div>
   );
 };
 

@@ -43,20 +43,34 @@ const EditArticleForm = () => {
 
   return (
     <>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <ul>
+      <form className="edit-article-form" onSubmit={(e) => handleSubmit(e)}>
+        <ul className="edit-article-ul-wrapper">
           {errors.map((error, idx) => (
-            <li key={idx}>{error}</li>
+            <li className="edit-article-errors" key={idx}>
+              {error}
+            </li>
           ))}
         </ul>
-        <input placeholder="Title" value={title} onChange={updateTitle}></input>
         <input
+          className="edit-article-title"
+          placeholder="Title"
+          value={title}
+          onChange={updateTitle}
+        ></input>
+        <textarea
+          className="edit-article-body"
           placeholder="Write your article here..."
           value={body}
           onChange={updateBody}
-        ></input>
-        <button onClick={handleSubmit}>Submit</button>
-        <button onClick={handleCancelClick}>Cancel</button>
+        ></textarea>
+        <div className="edit-article-button-wrapper">
+          <button className="submit-edit-article" onClick={handleSubmit}>
+            Submit
+          </button>
+          <button className="cancel-add-article" onClick={handleCancelClick}>
+            Cancel
+          </button>
+        </div>
       </form>
     </>
   );

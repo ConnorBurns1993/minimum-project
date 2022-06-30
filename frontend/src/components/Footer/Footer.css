@@ -1,0 +1,28 @@
+.footer-div {
+    position: absolute;
+    bottom: 0;
+    /* background-color: #f5f5f5; */
+    width: 100vw;
+    font-size: 45px;
+    padding-top: 1%;
+    text-align: center;
+    display: flex;
+    left: 15%;
+    width: 70%;
+    padding-bottom: 1%;
+    padding-top: 2%;
+    border-top: 1px solid rgb(146, 146, 146);
+}
+
+.fa-linkedin,
+.fa-github,
+.fa-at {
+    color: rgb(146, 146, 146);
+    transition: color .5s
+}
+
+.fa-linkedin:hover,
+.fa-github:hover,
+.fa-at:hover {
+    color: black;
+}

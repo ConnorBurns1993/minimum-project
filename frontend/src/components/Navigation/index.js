@@ -24,7 +24,7 @@ function Navigation({ isLoaded }) {
 
   const handleClick = () => {
     if (sessionUser) {
-      history.push("/articles");
+      history.push("/");
     } else {
       history.push("/");
     }
@@ -38,7 +38,7 @@ function Navigation({ isLoaded }) {
             alt=""
             className="home-logo"
             onClick={handleClick}
-            src="./images/favicon.svg"
+            src="../images/favicon.svg"
           ></img>
           <div className="nav-buttons-wrapper">{isLoaded && sessionLinks}</div>
         </li>

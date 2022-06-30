@@ -21,41 +21,51 @@
 .profile-dropdown{
     background-color: white;
     border: 1px solid black;
-    width: 8vw;
-    position: absolute;
-    left: 93.2%;
+    width: 10vw;
+    position: fixed;
+    left: 84%;
     border-radius: 3px;
     z-index: 2;
     list-style:none;
     text-align: left;
-    font-size: 15px;
-    height: 5vh;
+    height: 6vh;
     box-shadow: 3px 3px #0000005e;
 }
 
 .dropdown-name {
     position: relative;
+    font-family: sans-serif;
     top: 30%;
-    right: 10%;
+    left: 8%;
     padding:.5%;
-    font-size: large;
+    margin-top: 3%;
+    font-size: small;
 }
 
-.logout {
+/* .logout {
     color: rgb(75, 75, 75);
     cursor: pointer;
     transition: color .5s;
-    font-size: 15px;
+    font-size: large;
     position: relative;
     left: 350%;
     padding-top: 20%;
+} */
+
+.logout-p {
+    font-size: 25px;
+    position: relative;
+    left: 25%;
+    font-weight: bold;
+    width: 15vw;
+    cursor:pointer;
+
 }
 
-.logout-dropdown {
-    font-family: sans-serif;
-    font-size: 8px;
-    position: absolute;
-
+.logout {
+    padding-left: 1%;
+    margin-left: 3%;
+    font-size: 20px;
 }
 
 .write-article:hover,

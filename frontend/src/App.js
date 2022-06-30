@@ -10,6 +10,7 @@ import SingleArticle from "./components/SingleArticle";
 import AddArticleForm from "./components/AddArticleForm";
 import EditArticleForm from "./components/EditArticleForm";
 import PageNotFound from "./components/PageNotFound";
+import Footer from "./components/Footer";
 
 function App() {
   const history = useHistory();
@@ -32,6 +33,7 @@ function App() {
           <Route path="/" exact>
             <Navigation isLoaded={isLoaded} />
             <Home />
+            <Footer />
           </Route>
           <Route path="/articles" exact>
             <Navigation2 isLoaded={isLoaded} />

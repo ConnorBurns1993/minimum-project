@@ -25,22 +25,25 @@
 .profile-dropdown-2{
     background-color: white;
     border: 1px solid black;
-    width: 6%;
-    position: absolute;
-    left: 92%;
+    width: 8vw;
+    position: fixed;
+    top: 68.7%;
+    left: 3%;
     border-radius: 5px;
     z-index: 2;
     list-style:none;
     text-align: left;
     font-size: 15px;
     height: 10vh;
+    box-shadow: 3px 3px #0000005e;
 }
 
 .dropdown-name-2 {
     position: relative;
     top: 10%;
-    right: 5%;
-    text-decoration: underline;
+    left: 7%;
+    font-size: 30px;
+    font-weight: bolder;
     margin-bottom: 15%;
 }
 
@@ -88,4 +91,26 @@
 
 .gray-line {
     color: rgb(201, 201, 201)
+}
+
+.articles-logout-button {
+    border-radius: 4px;
+    background-color: rgb(30,30,30);
+    border: 1px solid rgb(30,30,30);
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: small;
+    padding-right: 7%;
+    width: 5vw;
+    height: 3vh;
+    padding: 2%;
+    cursor: pointer;
+    position: relative;
+    bottom: 8%;
+    right: 2%;
+  }
+
+  .articles-logout-button:hover {
+    background-color: black
 }

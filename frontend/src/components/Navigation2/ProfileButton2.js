@@ -41,7 +41,7 @@ function ProfileButton2({ user }) {
 
   const redirectHome = (e) => {
     e.preventDefault();
-    history.push("/");
+    history.push("/articles");
   };
 
   return (
@@ -63,17 +63,12 @@ function ProfileButton2({ user }) {
         )}
         {showMenu && (
           <ul className="profile-dropdown-2">
-            <li className="dropdown-name-2">{user.name}.</li>
+            <li className="dropdown-name-2">Logout?</li>
             <div className="logout-article-wrapper">
-              <NavLink className="write-article-2" to={`/articles/new`}>
-                <i className="fa-solid fa-pen-to-square write-article-2"></i>
-              </NavLink>
               <li>
-                <i
-                  className="fa-solid fa-right-from-bracket logout-2"
-                  alt="logout"
-                  onClick={logout}
-                ></i>
+                <button className="articles-logout-button" onClick={logout}>
+                  Confirm
+                </button>
               </li>
             </div>
           </ul>

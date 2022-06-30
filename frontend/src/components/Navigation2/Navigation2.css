@@ -38,10 +38,11 @@ ul {
 
 }
 
-.not-logged-in-wrapper{
+.not-logged-in-wrapper-2{
     width: 30vw;
-    display: flex;
-    flex-direction: column;
+    position: fixed;
+    top: 45%;
+    left: -17%;
 }
 
 .article-list-image {
@@ -50,4 +51,23 @@ ul {
     left: 60%;
     width: 25%;
     object-fit: cover;
+}
+
+.not-logged-in-buttons-wrapper-2 {
+width: 100vw;
+position: fixed;
+display: flex;
+flex-direction: column;
+bottom: 10%;
+right: 39%;
+}
+
+.not-logged-in-buttons-wrapper {
+width: 100vw;
+position: fixed;
+display: flex;
+flex-direction: column;
+bottom: 10%;
+right: 39%;
+padding-bottom: 3%;
 }

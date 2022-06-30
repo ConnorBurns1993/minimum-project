@@ -12,7 +12,7 @@ function Navigation2({ isLoaded }) {
 
   const redirectHome = (e) => {
     e.preventDefault();
-    history.push("/");
+    history.push("/articles");
   };
 
   let sessionLinks;
@@ -20,23 +20,24 @@ function Navigation2({ isLoaded }) {
     sessionLinks = <ProfileButton2 user={sessionUser} />;
   } else {
     sessionLinks = (
-      <div className="not-logged-in-wrapper">
+      <div className="not-logged-in-wrapper-2">
         <i
           className="fa-solid fa-house-chimney home-button-2"
           onClick={redirectHome}
         ></i>
-        <p className="gray-line">____</p>
-        <i className="fa-solid fa-file-pen edit-button-2"></i>
-        <p className="gray-line">____</p>
-        <LoginFormModal />
-        <SignupFormModal />
+        <div className="not-logged-in-buttons-wrapper">
+          <LoginFormModal />
+        </div>
+        <div className="not-logged-in-buttons-wrapper-2">
+          <SignupFormModal />
+        </div>
       </div>
     );
   }
 
   const handleClick = () => {
     if (sessionUser) {
-      history.push("/articles");
+      history.push("/");
     } else {
       history.push("/");
     }

@@ -45,19 +45,19 @@ function ProfileButton({ user }) {
         <i className={iconClass} />
       </button>
       {showMenu && (
-        <ul className="profile-dropdown">
+        <p className="profile-dropdown">
           <div className="logout-article-wrapper">
-            <p className="dropdown-name">{user.name}.</p>
-            <p classname="logout-dropdown">Logout</p>
-            <li>
+            <p className="dropdown-name">{user.name}</p>
+            <p onClick={logout} className="logout-p">
+              Logout.
               <i
                 className="fa-solid fa-arrow-right-from-bracket logout"
                 alt="logout"
                 onClick={logout}
               ></i>
-            </li>
+            </p>
           </div>
-        </ul>
+        </p>
       )}
     </>
   );

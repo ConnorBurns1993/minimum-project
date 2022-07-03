@@ -20,12 +20,12 @@
     border-right: 1px solid rgb(201, 201, 201);
 }
 
-.nav-buttons-wrapper-2 {
+/* .nav-buttons-wrapper-2 {
     position: absolute;
     top: 500%;
     display: flex;
     flex-direction: column;
-}
+} */
 
 .nav-home-li-2 {
     position: relative;
@@ -58,7 +58,7 @@ width: 6vw;
 position: fixed;
 /* display: flex;
 flex-direction: column; */
-bottom: 10%;
+bottom: 30%;
 left: 7.5%;
 height: 4vh;
 }
@@ -68,7 +68,12 @@ height: 4vh;
     position: fixed;
     /* display: flex;
     flex-direction: column; */
-    bottom: 10%;
-    left: 9%;
+    bottom: 30%;
+    left: 10%;
     margin-bottom: 3%;
+}
+
+.gray-line-3 {
+    padding-top: 120%;
+    color: rgb(201, 201, 201)
 }

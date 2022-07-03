@@ -25,6 +25,7 @@ function Navigation2({ isLoaded }) {
           className="fa-solid fa-house-chimney home-button-2"
           onClick={redirectHome}
         ></i>
+        <p className="gray-line-3">____</p>
         <div className="not-logged-in-buttons-wrapper">
           <LoginFormModal />
         </div>

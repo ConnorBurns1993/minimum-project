@@ -51,8 +51,6 @@
 .write-article-2 {
     color: rgb(146, 146, 146);
     position: relative;
-    margin-right: 25%;
-    margin-left: 10%;
     margin-top: 3.5%;
     cursor: pointer;
     transition: color .5s;
@@ -84,10 +82,10 @@
     display: flex;
     flex-direction: column;
     height: 50vh;
-    position: relative;
-    left: 540%;
+    position: absolute;
     justify-content: space-between;
-    margin-top: 600%;
+    left: 85%;
+    margin-top: 95%;
 }
 
 .gray-line {

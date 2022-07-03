@@ -33,10 +33,12 @@ function App() {
           <Route path="/about-me" exact>
             <Navigation2 isLoaded={isLoaded} />
             <AboutMe />
+            <Footer />
           </Route>
           <Route path="/articles" exact>
             <Navigation2 isLoaded={isLoaded} />
             <ArticleList />
+            <Footer />
           </Route>
           <Route path="/articles/new" exact>
             <Navigation2 isLoaded={isLoaded} />

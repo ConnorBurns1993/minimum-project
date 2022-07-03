@@ -1,5 +1,5 @@
-.footer-div {
-    position: absolute;
+.footer-div-home {
+    position: fixed;
     bottom: 0;
     /* background-color: #f5f5f5; */
     width: 100vw;
@@ -11,7 +11,24 @@
     width: 70%;
     padding-bottom: 1%;
     padding-top: 2%;
+    left: 0;
+   right: 0;
     border-top: 1px solid rgb(146, 146, 146);
+}
+
+.footer-div-articles {
+    position: relative;
+    bottom: 0;
+    font-size: 45px;
+    padding-top: 1%;
+    text-align: center;
+    display: flex;
+    left: 5%;
+    width: 70%;
+    padding-bottom: 1%;
+    padding-top: 2%;
+   right: 0;
+border-top: 1px solid rgb(146, 146, 146);
 }
 
 .fa-linkedin,

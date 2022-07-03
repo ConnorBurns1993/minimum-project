@@ -1,9 +1,21 @@
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, useHistory } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
+  const [homePage, setHomePage] = useState("footer-div-home");
+  const history = useHistory();
+
+  useEffect(() => {
+    if (history.location.pathname === "/articles")
+      setHomePage("footer-div-articles");
+    else {
+      setHomePage("footer-div-home");
+    }
+  });
+
   return (
-    <div className="footer-div">
+    <div className={homePage}>
       <a
         target="_blank"
         href="https://www.linkedin.com/in/connor-burns-647766194/"

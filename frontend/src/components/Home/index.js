@@ -8,8 +8,7 @@ const Home = () => {
   const history = useHistory();
 
   const handleDemoUser = () => {
-    history.push("/articles");
-    return dispatch(sessionActions.demoUser());
+    dispatch(sessionActions.demoUser()).then(() => history.push("/articles"));
   };
 
   return (

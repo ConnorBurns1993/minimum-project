@@ -16,9 +16,9 @@ const Footer = () => {
       >
         <i className="fa-brands fa-github"></i>
       </a>
-      <a target="_blank" href="mailto:cburns1993@gmail.com">
-        <i className="fa-solid fa-at"></i>
-      </a>
+      <NavLink to="/about-me">
+        <i className="fa-brands fa-amilia"></i>
+      </NavLink>
     </div>
   );
 };

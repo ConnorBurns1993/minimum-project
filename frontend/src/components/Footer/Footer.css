@@ -16,13 +16,13 @@
 
 .fa-linkedin,
 .fa-github,
-.fa-at {
+.fa-amilia {
     color: rgb(146, 146, 146);
     transition: color .5s
 }
 
 .fa-linkedin:hover,
 .fa-github:hover,
-.fa-at:hover {
+.fa-amilia:hover {
     color: black;
 }

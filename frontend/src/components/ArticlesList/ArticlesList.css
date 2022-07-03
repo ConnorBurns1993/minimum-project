@@ -2,8 +2,10 @@
     font-size: 100px;
     font-weight: 100;
     position: relative;
-    padding-top: 9%;
-    left: 10%;
+    height: 25%;
+    right: 25%;
+    top: 45%;
+    width: 30%;
 }
 
 .article-title-h2 {
@@ -11,7 +13,9 @@
     border-bottom: 1px solid black;
     height: 46.5vh;
     position: relative;
-    left: 12%;
+    left: 6%;
+    width: 88%;
+
 
 }
 
@@ -20,7 +24,9 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', serif;
     margin-bottom: 1%;
     position: relative;
-    left: 10%;
+    right: 30%;
+    top: 45%;
+    width: 20%;
 }
 
 .article-list-li {

@@ -1,6 +1,7 @@
 .comments-by-article-wrapper {
     position: relative;
-    left: 24%;
+    left: -5%;
+    width: 40%;
     margin-top: 3%;
 }
 

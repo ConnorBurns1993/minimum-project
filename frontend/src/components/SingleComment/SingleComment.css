@@ -3,18 +3,20 @@
 .comment-body {
     border-bottom: solid rgb(201, 201, 201) 1px;
     height: 15vh;
-    width: 30vw;
+    width: 28vw;
     position: relative;
-    right: 35%;
+    right: 11%;
     padding: 1%;
     font-size: small;
     margin-bottom: -1%;
+    margin-top: 1%;
 
 }
 
 .comment-author {
     /* margin: .5%; */
     margin-top: 5%;;
+    margin-left: 3%;
     font-weight: bolder;
     font-size: small;
     font-family: sans-serif;
@@ -30,7 +32,7 @@
     background-color: white;
     border: none;
     position: relative;
-    left: 28%;
+    left: 70%;
     bottom: 40px;
     color: rgb(75,75,75);
 }

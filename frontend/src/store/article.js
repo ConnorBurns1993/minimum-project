@@ -132,8 +132,6 @@ const articleReducer = (state = initialState, action) => {
         return normalAddArticle;
       }
 
-      break;
-
     case DELETE_ARTICLE:
       const deletedArticleState = { ...state };
       delete deletedArticleState[action.articleId];

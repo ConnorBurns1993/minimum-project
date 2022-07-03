@@ -65,5 +65,6 @@ background-color: white;
 .errors-log-in {
     font-size: 10px;
     bottom: 790%;
+    position: relative;
     right: 15%;
 }

@@ -7,7 +7,7 @@
     font-size: small;
     padding: .5%;
     padding-right: 1%;
-    width: 6%;
+    width: 6vw;
     transition: all 0.5s;
     cursor: pointer;
   }
@@ -17,6 +17,7 @@
     display: inline-block;
     position: relative;
     transition: 0.5s;
+    height: 100%;
   }
 
 .sign-up-home:after {
@@ -94,6 +95,6 @@
 .errors-sign-up {
     font-size: 11px;
     position: relative;
-    bottom: 155%;
+    bottom: 150%;
     right: 5%;
 }

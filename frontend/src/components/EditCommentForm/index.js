@@ -43,7 +43,7 @@ const EditCommentForm = ({ setCommentForm, comment }) => {
 
   return (
     <>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form className="edit-comment-form" onSubmit={(e) => handleSubmit(e)}>
         <ul>
           {errors.map((error, idx) => (
             <li key={idx} className="comment-errors">

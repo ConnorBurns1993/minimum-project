@@ -36,11 +36,7 @@ function Navigation2({ isLoaded }) {
   }
 
   const handleClick = () => {
-    if (sessionUser) {
-      history.push("/");
-    } else {
-      history.push("/");
-    }
+    history.push("/");
   };
 
   return (

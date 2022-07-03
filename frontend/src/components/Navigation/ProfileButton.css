@@ -43,16 +43,6 @@
     font-size: small;
 }
 
-/* .logout {
-    color: rgb(75, 75, 75);
-    cursor: pointer;
-    transition: color .5s;
-    font-size: large;
-    position: relative;
-    left: 350%;
-    padding-top: 20%;
-} */
-
 .logout-p {
     font-size: 25px;
     position: relative;

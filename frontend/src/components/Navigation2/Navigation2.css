@@ -39,10 +39,10 @@ ul {
 }
 
 .not-logged-in-wrapper-2{
-    width: 30vw;
+    width: 2vw;
     position: fixed;
     top: 45%;
-    left: -17%;
+    left: 11.5%;
 }
 
 .article-list-image {
@@ -54,20 +54,21 @@ ul {
 }
 
 .not-logged-in-buttons-wrapper-2 {
-width: 100vw;
+width: 6vw;
 position: fixed;
-display: flex;
-flex-direction: column;
+/* display: flex;
+flex-direction: column; */
 bottom: 10%;
-right: 39%;
+left: 7.5%;
+height: 4vh;
 }
 
 .not-logged-in-buttons-wrapper {
-width: 100vw;
-position: fixed;
-display: flex;
-flex-direction: column;
-bottom: 10%;
-right: 39%;
-padding-bottom: 3%;
+    width: 3vw;
+    position: fixed;
+    /* display: flex;
+    flex-direction: column; */
+    bottom: 10%;
+    left: 9%;
+    margin-bottom: 3%;
 }

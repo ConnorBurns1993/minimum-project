@@ -1,5 +1,5 @@
 .edit-comment-body {
-    width: 35vw;
+    width: 31vw;
     height: 12vh;
     position: relative;
     bottom: 160px;
@@ -11,7 +11,7 @@
 .submit-edit-form,
 .cancel-edit-form {
     position: relative;
-    right: 7%;
+    right: 14%;
     bottom: 161px;
     font-size: x-small;
     font-weight: 600;
@@ -25,4 +25,8 @@
     position: relative;
     left: 80%;
     bottom: 55px;
+}
+
+.edit-comment-form {
+    height: 0vh;
 }

@@ -16,7 +16,8 @@
 
 .add-a-comment-p {
     position: relative;
-    left: 23%;
+    left: -20%;
+    width: 10%;
     font-family: sans-serif;
     margin-bottom: .3%;
     text-indent: 10px;
@@ -30,7 +31,7 @@
 }
 
 .textarea-add-comment {
-    width: 35vw;
+    width: 30vw;
     height: 12vh;
     position: relative;
     padding: 1%;
@@ -39,7 +40,7 @@
 
 .inner-comment-wrapper {
     position: relative;
-    right: 27%
+    right: 25%
 }
 
 .add-a-comment-ul {

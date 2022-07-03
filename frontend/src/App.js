@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import SingleArticle from "./components/SingleArticle";
 import AddArticleForm from "./components/AddArticleForm";
 import EditArticleForm from "./components/EditArticleForm";
+import AboutMe from "./components/AboutMe";
 import PageNotFound from "./components/PageNotFound";
 import Footer from "./components/Footer";
 
@@ -20,12 +21,6 @@ function App() {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
 
-  // useEffect(() => {
-  //   history.listen((location) => {
-  //     console.log(location.pathname);
-  //   });
-  // });
-
   return (
     <>
       {isLoaded && (
@@ -34,6 +29,10 @@ function App() {
             <Navigation isLoaded={isLoaded} />
             <Home />
             <Footer />
+          </Route>
+          <Route path="/about-me" exact>
+            <Navigation2 isLoaded={isLoaded} />
+            <AboutMe />
           </Route>
           <Route path="/articles" exact>
             <Navigation2 isLoaded={isLoaded} />

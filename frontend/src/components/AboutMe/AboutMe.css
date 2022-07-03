@@ -1,0 +1,29 @@
+.about-me-wrapper {
+    position: relative;
+    left: 9%;
+    padding-top: 6%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-about-me-wrapper {
+    display: inline-flex;
+    width: 30vw;
+}
+
+.about-me-h2 {
+    font-size: 9rem;
+}
+
+.about-me-img {
+    width: 15vw;
+    height:auto;
+    border-radius: 150px;
+    border: 1px solid black;
+}
+
+.about-me-p {
+    margin-top: 5%;
+    font-family: sans-serif;
+    padding-left: 6%;
+}

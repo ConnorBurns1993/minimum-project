@@ -42,7 +42,7 @@
   .sign-up-form{
     display: flex;
     flex-direction: column;
-    width: 50vh;
+    width: 25vw;
     height: 60vh;
     border: 1px solid black;
   }
@@ -56,7 +56,8 @@
     font-weight: bolder;
     width: 40%;
     position: relative;
-    bottom: 10%;
+    margin: auto;
+    /* bottom: 10%; */
     /* font-family: sans-serif; */
   }
 
@@ -68,7 +69,7 @@
     font-size: 11px;
     font-family: sans-serif;
     position: relative;
-    bottom: 6%;
+    bottom: 9%;
   }
 
   .sign-up-modal {
@@ -94,7 +95,23 @@
 
 .errors-sign-up {
     font-size: 11px;
-    position: relative;
-    bottom: 150%;
-    right: 5%;
+    top: 20%;
+    right: 25%;
+  }
+
+  .errors-sign-up-ul {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+}
+
+.sign-up-inputs-wrapper {
+  width: 60%;
+  height: 40%;
+  padding: 1%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  bottom: 0%;
+  right: 8%;
 }

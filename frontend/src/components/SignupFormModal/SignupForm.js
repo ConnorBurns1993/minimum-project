@@ -40,49 +40,51 @@ function SignupForm() {
       <p className="sign-up-p">
         By signing up, you agree to our Terms of Service.
       </p>
-      <ul>
+      <ul className="errors-sign-up-ul">
         {errors.map((error, idx) => (
           <li className="errors-sign-up" key={idx}>
             {error}
           </li>
         ))}
       </ul>
-      <label className="sign-up-inputs" id="one">
-        Email:
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
-      <label className="sign-up-inputs" id="two">
-        Full Name:
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-      </label>
-      <label className="sign-up-inputs 3" id="three">
-        Password:
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <label className="sign-up-inputs" id="four">
-        Confirm Password:
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          required
-        />
-      </label>
+      <div className="sign-up-inputs-wrapper">
+        <label className="sign-up-inputs" id="one">
+          Email:
+          <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </label>
+        <label className="sign-up-inputs" id="two">
+          Full Name:
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </label>
+        <label className="sign-up-inputs 3" id="three">
+          Password:
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </label>
+        <label className="sign-up-inputs" id="four">
+          Confirm Password:
+          <input
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
+        </label>
+      </div>
       <button className="sign-up-modal" type="submit">
         Sign Up
       </button>

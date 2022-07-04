@@ -29,7 +29,7 @@ const Footer = () => {
         <i className="fa-brands fa-github"></i>
       </a>
       <NavLink to="/about-me">
-        <i className="fa-brands fa-amilia"></i>
+        <i className="fa-solid fa-address-card"></i>
       </NavLink>
     </div>
   );

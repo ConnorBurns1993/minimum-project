@@ -16,12 +16,13 @@
 
 .single-article-p {
     line-height: 1.6em;
-    padding-left: 7%;
-    padding-right: 7%;
+    width: 55vw;
+    text-indent: 5%;
 }
 
 .single-article-p::first-letter {
     font-size: 50px;
+
 }
 
 .author{

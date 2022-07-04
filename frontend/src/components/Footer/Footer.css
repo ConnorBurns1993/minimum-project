@@ -33,13 +33,13 @@ border-top: 1px solid rgb(146, 146, 146);
 
 .fa-linkedin,
 .fa-github,
-.fa-amilia {
+.fa-address-card {
     color: rgb(146, 146, 146);
     transition: color .5s
 }
 
 .fa-linkedin:hover,
 .fa-github:hover,
-.fa-amilia:hover {
+.fa-address-card:hover {
     color: black;
 }

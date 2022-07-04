@@ -16,7 +16,7 @@
 
 .add-a-comment-p {
     position: relative;
-    left: -20%;
+    left: -15%;
     width: 10%;
     font-family: sans-serif;
     margin-bottom: .3%;
@@ -40,7 +40,7 @@
 
 .inner-comment-wrapper {
     position: relative;
-    right: 25%
+    right: 20%
 }
 
 .add-a-comment-ul {

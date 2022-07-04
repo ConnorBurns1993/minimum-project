@@ -23,8 +23,9 @@
 
 .edit-delete-articles {
     position: relative;
-    left: 80%;
-    bottom: 55px;
+    bottom: 52px;
+    width: 3vw;
+    left: 30.5%;
 }
 
 .edit-comment-form {

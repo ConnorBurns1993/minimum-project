@@ -1,6 +1,6 @@
 .comments-by-article-wrapper {
     position: relative;
-    left: -5%;
+    left: -0%;
     width: 40%;
     margin-top: 3%;
 }
@@ -8,7 +8,7 @@
 .show-comments {
     position: relative;
     margin-top: 3%;
-    left: 80%;
+    left: 79%;
     font-size: x-small;
     font-weight: 600;
     border: none;

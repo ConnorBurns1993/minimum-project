@@ -9,8 +9,7 @@ const DeleteArticleConfirmation = ({ article }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push("/articles");
-    return dispatch(destroyArticle(article?.id));
+    dispatch(destroyArticle(article?.id)).then(history.push("/articles"));
   };
 
   return (

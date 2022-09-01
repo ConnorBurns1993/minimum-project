@@ -8,6 +8,7 @@ import { Modal } from "../../context/Modal";
 import "./SingleArticle.css";
 import CommentsByArticle from "../CommentsByArticle";
 import AddCommentForm from "../AddCommentForm";
+import Bookmarks from "../Bookmarks";
 
 const SingleArticle = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const SingleArticle = () => {
   const [showComments, setShowComments] = useState(false);
   const [showCommentsText, setShowCommentsText] = useState("Show Comments");
 
+  console.log(article);
   useEffect(() => {
     dispatch(loadOneArticle(articleId));
   }, [dispatch, articleId]);
@@ -29,7 +31,10 @@ const SingleArticle = () => {
       {article && (
         <div>
           <div className="single-article-wrapper">
-            <h2 className="single-article-h2">{article?.title}</h2>
+            <div className="title-and-bookmark">
+              <h2 className="single-article-h2">{article?.title}</h2>
+              <Bookmarks articleId={article.id} />
+            </div>
             <p className="single-article-p">{article?.body}</p>
             <p className="author">By {article?.User?.name}</p>
             <p className="gray-line2">

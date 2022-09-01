@@ -1,0 +1,11 @@
+
+
+.fa-bookmark{
+    font-size: 30px;
+}
+
+.title-and-bookmark{
+    display: inline-flex;
+    position: relative;
+    width: 55vw;
+}

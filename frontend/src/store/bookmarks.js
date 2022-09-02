@@ -50,11 +50,20 @@ export const getBookmark = (articleId) => async (dispatch) => {
   return bookmarks;
 };
 
+export const getAllBookmarks = (bookmarks) => async (dispatch) => {
+  const response = await csrfFetch(`/api/bookmarks`);
+  const userbookmarks = await response.json();
+  dispatch(getBookmarks(userbookmarks));
+  return userbookmarks;
+};
+
 const bookmarksReducer = (state = {}, action) => {
   switch (action.type) {
     case GET_BOOKMARKS:
       let newState = {};
-      action.likes.forEach((bookmark) => (newState[bookmark.id] = bookmark));
+      action.bookmarks.forEach(
+        (bookmark) => (newState[bookmark.id] = bookmark)
+      );
       return newState;
     case CREATE_BOOKMARK:
       let newCreateState = { ...state };

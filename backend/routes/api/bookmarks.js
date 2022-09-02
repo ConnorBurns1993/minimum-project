@@ -15,6 +15,14 @@ router.get(
   })
 );
 
+router.get(
+  "/",
+  asyncHandler(async (req, res) => {
+    const bookmarks = await db.Bookmark.findAll();
+    return res.json(bookmarks);
+  })
+);
+
 router.post(
   "/",
   asyncHandler(async (req, res) => {

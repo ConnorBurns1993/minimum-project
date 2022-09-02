@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import SingleArticle from "./components/SingleArticle";
 import AddArticleForm from "./components/AddArticleForm";
 import EditArticleForm from "./components/EditArticleForm";
+import BookmarkedArticles from "./components/BookmarkedArticles";
 import AboutMe from "./components/AboutMe";
 import PageNotFound from "./components/PageNotFound";
 import Footer from "./components/Footer";
@@ -43,6 +44,11 @@ function App() {
           <Route path="/articles/new" exact>
             <Navigation2 isLoaded={isLoaded} />
             <AddArticleForm />
+          </Route>
+          <Route path="/articles/bookmarked" exact>
+            <Navigation2 isLoaded={isLoaded} />
+            <BookmarkedArticles />
+            <Footer />
           </Route>
           <Route path="/articles/:articleId" exact>
             <Navigation2 isLoaded={isLoaded} />

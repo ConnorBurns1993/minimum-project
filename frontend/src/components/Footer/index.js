@@ -7,7 +7,10 @@ const Footer = () => {
   const history = useHistory();
 
   useEffect(() => {
-    if (history.location.pathname === "/articles")
+    if (
+      history.location.pathname === "/articles" ||
+      history.location.pathname === "/articles/bookmarked"
+    )
       setHomePage("footer-div-articles");
     else {
       setHomePage("footer-div-home");

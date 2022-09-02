@@ -56,6 +56,10 @@ function ProfileButton2({ user }) {
           <i className="fa-solid fa-file-pen edit-button-2"></i>
         </NavLink>
         <p className="gray-line">____</p>
+        <NavLink to="/articles/bookmarked">
+          <i className="fa-solid fa-bookmark edit-button-2 bigger-mark"></i>
+        </NavLink>
+        <p className="gray-line">____</p>
         {user && (
           <button className={profileClass} onClick={openMenu}>
             <i className="fa-solid fa-user" />

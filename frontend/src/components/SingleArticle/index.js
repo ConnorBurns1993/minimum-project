@@ -31,10 +31,10 @@ const SingleArticle = () => {
       {article && (
         <div>
           <div className="single-article-wrapper">
-            <div className="title-and-bookmark">
-              <h2 className="single-article-h2">{article?.title}</h2>
-              <Bookmarks articleId={article.id} />
-            </div>
+            <h2 className="single-article-h2">
+              {article?.title} <Bookmarks articleId={article.id} />
+            </h2>
+
             <p className="single-article-p">{article?.body}</p>
             <p className="author">By {article?.User?.name}</p>
             <p className="gray-line2">

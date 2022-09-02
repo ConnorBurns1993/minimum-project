@@ -14,6 +14,8 @@ const Bookmarks = ({ articleId }) => {
 
   const dispatch = useDispatch();
   const [marked, setMarked] = useState(false);
+  const [bookmarked, setBookmarked] = useState(false);
+  const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
     const getBookmarks = async () => {
@@ -29,12 +31,18 @@ const Bookmarks = ({ articleId }) => {
       const bookmark = { articleId, userId };
       dispatch(destroyBookmark(bookmark));
     } else {
+      setTimeout(() => {
+        setOpacity(0);
+        setBookmarked(true);
+      }, 500);
+      clearTimeout();
+
       const bookmark = { articleId, userId };
       dispatch(addBookmark(bookmark));
     }
+    setOpacity(1);
     setMarked(!marked);
   };
-
   return (
     <div className="bookmark-div">
       {sessionUser && (
@@ -44,6 +52,14 @@ const Bookmarks = ({ articleId }) => {
             !marked ? "fa-regular fa-bookmark" : "fa-solid fa-bookmark"
           }
         ></i>
+      )}
+      {marked && (
+        <p
+          style={{ opacity: opacity }}
+          className={opacity ? "fade-in" : "fade-out"}
+        >
+          Bookmarked!
+        </p>
       )}
     </div>
   );

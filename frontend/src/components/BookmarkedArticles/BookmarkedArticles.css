@@ -1,0 +1,16 @@
+.bookmark-title-h2{
+background-color: #f7f7f7;
+border-bottom: 1px solid black;
+height: 46.5vh;
+position: relative;
+left: 6%;
+width: 88%;
+}
+
+.bookmark-list-image{
+position: absolute;
+bottom: 58%;
+left: 65%;
+width: 18%;
+object-fit: cover;
+}

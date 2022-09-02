@@ -1,11 +1,45 @@
-
+.bookmark-div{
+    position:relative;
+    display: inline-flex;
+    margin-left: 30px;
+    bottom: 5px;
+}
 
 .fa-bookmark{
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.bigger-mark {
     font-size: 30px;
 }
 
-.title-and-bookmark{
-    display: inline-flex;
+.fa-file-pen{
     position: relative;
-    width: 55vw;
+    left: 3px;
+    top: 10px;
+}
+
+.fade-in {
+    position: fixed;
+    transition: opacity 1s ease;
+    font-size: 11px;
+    font-style: italic;
+    margin-left: 25px;
+    user-select: none;
+    font-weight: 100;
+    margin-top: 2px;
+}
+
+.fade-out{
+    opacity: 0;
+    transition: opacity 1s ease;
+    font-size: 11px;
+    font-style: italic;
+    position: fixed;
+    user-select: none;
+    font-weight: 100;
+    margin-left: 25px;
+    margin-top: 2px;
 }

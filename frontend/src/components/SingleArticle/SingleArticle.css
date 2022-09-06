@@ -33,6 +33,7 @@
     width: 15%;
     font-size: small;
     margin-top: 1.5%;
+    margin-bottom: .5%;
 }
 
 .gray-line2 {
@@ -45,7 +46,7 @@
 
 .article-edit,
 .article-delete {
-    background-color: white;
+    background-color: transparent;
     border: none;
     position: relative;
     color: rgb(75,75,75);

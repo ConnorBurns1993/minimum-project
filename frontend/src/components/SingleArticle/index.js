@@ -40,18 +40,18 @@ const SingleArticle = () => {
             <p className="gray-line2">
               __________________________________________________________________
             </p>
+            {sessionUser?.id === article?.userId && (
+              <div className="edit-delete-articles">
+                <NavLink to={`/articles/${article?.id}/edit`} exact>
+                  <button className="fas fa-solid fa-pen article-edit"></button>
+                </NavLink>
+                <button
+                  className="fas fa-solid fa-trash article-delete"
+                  onClick={() => setOpenModal(true)}
+                ></button>
+              </div>
+            )}
           </div>
-          {sessionUser?.id === article?.userId && (
-            <div className="edit-delete-articles">
-              <NavLink to={`/articles/${article?.id}/edit`} exact>
-                <button className="fas fa-solid fa-pen article-edit"></button>
-              </NavLink>
-              <button
-                className="fas fa-solid fa-trash article-delete"
-                onClick={() => setOpenModal(true)}
-              ></button>
-            </div>
-          )}
           {openModal && (
             <Modal onClose={() => setOpenModal(false)}>
               <DeleteArticleConfirmation article={article} />

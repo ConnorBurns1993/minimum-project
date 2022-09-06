@@ -26,7 +26,7 @@
 .profile-dropdown-2{
     background-color: white;
     border: 1px solid black;
-    width: 8vw;
+    width: 160px;
     position: fixed;
     top: 68.7%;
     left: 3%;
@@ -35,7 +35,7 @@
     list-style:none;
     text-align: left;
     font-size: 15px;
-    height: 10vh;
+    height: 90px;
     box-shadow: 3px 3px #0000005e;
 }
 
@@ -101,8 +101,8 @@
     text-align: center;
     font-size: small;
     padding-right: 7%;
-    width: 5vw;
-    height: 3vh;
+    width: 100px;
+    height: 28px;
     padding: 2%;
     cursor: pointer;
     position: relative;

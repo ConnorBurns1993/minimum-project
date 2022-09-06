@@ -7,9 +7,10 @@
     font-size: small;
     padding: .5%;
     padding-right: 1%;
-    width: 6vw;
+    width: 120px;
     transition: all 0.5s;
     cursor: pointer;
+    height: 38px;
   }
 
   .sign-up-home{
@@ -17,7 +18,6 @@
     display: inline-block;
     position: relative;
     transition: 0.5s;
-    height: 100%;
   }
 
 .sign-up-home:after {

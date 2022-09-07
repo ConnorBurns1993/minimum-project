@@ -6,20 +6,19 @@ import { useEffect, useState, useTransition } from "react";
 import { loadArticles } from "../../store/article";
 
 const Home = () => {
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const [onOff, setOnOff] = useState(true);
-  const [display, setDisplay] = useState(true);
-  const { stage, shouldMount } = useTransition(onOff, 300);
-
-  useEffect(() => {
-    dispatch(loadArticles());
-  }, [dispatch]);
-
   const articles = useSelector((state) => {
     return Object.values(state.articles);
   });
   const random = Math.floor(Math.random() * articles.length);
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const [onOff, setOnOff] = useState(false);
+  const [article, setArticle] = useState(articles[random]);
+  const [display, setDisplay] = useState(true);
+
+  useEffect(() => {
+    dispatch(loadArticles());
+  }, [dispatch]);
 
   const handleDemoUser = () => {
     dispatch(sessionActions.demoUser()).then(() => history.push("/articles"));
@@ -27,6 +26,9 @@ const Home = () => {
 
   setTimeout(() => {
     setOnOff(!onOff);
+    if (!onOff) {
+      setArticle(articles[random]);
+    }
   }, 5000);
 
   return (
@@ -45,22 +47,34 @@ const Home = () => {
       ></img>
       <div className="home-footer"></div>
       <div className="random-article-wrapper">
-        <div className="random-article">
-          <>
-            <p
-              style={{ transition: "1s", opacity: onOff ? 1 : 0 }}
-              className="article-list-title random-article-title"
-            >
-              {articles[random]?.title}
-            </p>
-            <p
-              style={{ transition: "1s", opacity: onOff ? 1 : 0 }}
-              className="article-list-body random-article-body"
-            >
-              {articles[random]?.body}
-            </p>
-          </>
-        </div>
+        <p className="curiosity">Let your curiosity wander...</p>
+        <NavLink
+          to={`/articles/${article?.id}`}
+          className={!onOff ? "disabled-link" : ""}
+        >
+          <div className={onOff ? "random-article" : "random-article-loading"}>
+            <>
+              {!onOff && (
+                <img
+                  className="article-loading"
+                  src="https://cdn.dribbble.com/users/924068/screenshots/3757746/dribbble.gif"
+                ></img>
+              )}
+              <p
+                style={{ transition: ".5s", opacity: onOff ? 1 : 0 }}
+                className="article-list-title random-article-title"
+              >
+                {article?.title}
+              </p>
+              <p
+                style={{ transition: ".5s", opacity: onOff ? 1 : 0 }}
+                className="article-list-body random-article-body"
+              >
+                {article?.body}
+              </p>
+            </>
+          </div>
+        </NavLink>
       </div>
     </div>
   );

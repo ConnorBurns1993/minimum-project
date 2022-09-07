@@ -26,6 +26,42 @@
 
 }
 
+.random-article {
+    background-color: white;
+    position: relative;
+    left: 25%;
+    margin: 1%;
+    list-style:none;
+    text-overflow: ellipsis;
+    overflow:calc();
+    width: 50%;
+    height: 170px;
+    overflow: hidden;
+}
+
+.random-article-title{
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', serif;
+
+}
+
+.random-article-wrapper{
+    background-color: white;
+}
+
+.enjoy{
+    padding-top: 1%;
+    font-size: 18px;
+    position: relative;
+}
+
+.random-article-body{
+    font-size: 10px;
+    width: 50%;
+}
+
+
 .start-reading {
     background-color: rgb(30, 30, 30);
     color: white;
@@ -81,3 +117,9 @@ height: 38px;
     z-index: 0;
     top: 0;
 }
+
+@media only screen and (max-width: 1733px) {
+    .home-page-img {
+      height: 60%;
+    }
+  }

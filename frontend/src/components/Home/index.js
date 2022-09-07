@@ -45,7 +45,6 @@ const Home = () => {
       ></img>
       <div className="home-footer"></div>
       <div className="random-article-wrapper">
-        <h2 className="enjoy">Articles you may enjoy...</h2>
         <div className="random-article">
           <>
             <p

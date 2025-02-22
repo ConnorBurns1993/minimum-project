@@ -9,7 +9,7 @@ const AboutMe = () => {
           <img
             alt=""
             className="about-me-img"
-            src="https://i.imgur.com/oEXe6ov.jpg"
+            src="https://i.imgur.com/1WlnVrp.jpeg"
           ></img>
           <p className="about-me-p">
             Hello, my name is Connor Burns and I am a software developer who has
